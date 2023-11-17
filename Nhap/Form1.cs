@@ -12,6 +12,7 @@ namespace Nhap
 {
     public partial class Form1 : Form
     {
+        DataTable NotNhac = new DataTable();
         System.Media.SoundPlayer C4 = new System.Media.SoundPlayer(Properties.Resources.a84);   //  DO_4
         System.Media.SoundPlayer D4 = new System.Media.SoundPlayer(Properties.Resources.a89);   //  RE_4
         System.Media.SoundPlayer E4 = new System.Media.SoundPlayer(Properties.Resources.a85);   //  MI_4
@@ -31,6 +32,15 @@ namespace Nhap
         {
             InitializeComponent();
             this.KeyPreview = true;
+            NotNhac.Columns.Add("1", typeof(string));
+            NotNhac.Columns.Add("2", typeof(string));
+            NotNhac.Columns.Add("3", typeof(string));
+            NotNhac.Columns.Add("4", typeof(string));
+            dataGridView1.DataSource = NotNhac;
+            dataGridView1.Columns["1"].Width = 50;
+            dataGridView1.Columns["2"].Width = 50;
+            dataGridView1.Columns["3"].Width = 50;
+            dataGridView1.Columns["4"].Width = 50;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
