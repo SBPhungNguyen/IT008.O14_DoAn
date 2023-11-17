@@ -118,49 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="a65" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a65.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a68" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a68.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="a70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a70.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="a71" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a71.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a72.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a73" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a73.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a74" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a74.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a75" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a75.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a76" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a76.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a79" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a79.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a80.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="a89" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a89.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="a83" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a83.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="a68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a68.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a73" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a73.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a75.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="playbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a84" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a84.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Round_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Round_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a76" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a76.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="a85" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a85.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="a89" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a89.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Black_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Black_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="White_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a79" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a79.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a71.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a65.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a80.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a72.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a74.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Curved_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Curved_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

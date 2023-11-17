@@ -32,7 +32,10 @@ namespace Nhap
             InitializeComponent();
             this.KeyPreview = true;
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -129,6 +132,11 @@ namespace Nhap
                 case Keys.V: B5.Play(); break;
                 case Keys.B: C6.Play(); break;
             }
+        }
+
+        private void richTextBox4_TextChanged(object sender, EventArgs e)
+        {
+            richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
         }
     }
 }

@@ -125,5 +125,20 @@
   <ItemGroup>
     <None Include="Resources\a89.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play_Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round_Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White_Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black_Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Curved_Note.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
