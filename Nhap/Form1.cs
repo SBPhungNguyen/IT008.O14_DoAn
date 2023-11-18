@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,6 +30,8 @@ namespace Nhap
         System.Media.SoundPlayer A5 = new System.Media.SoundPlayer(Properties.Resources.a74);   //  LA_5
         System.Media.SoundPlayer B5 = new System.Media.SoundPlayer(Properties.Resources.a75);   //  SI_5
         System.Media.SoundPlayer C6 = new System.Media.SoundPlayer(Properties.Resources.a76);   //  DO_6
+        private RichTextBox check_NoteTextbox_Keydown;
+
         public Form1()
         {
             InitializeComponent();
@@ -51,9 +54,26 @@ namespace Nhap
             dataGridView1.Columns["7"].Width = 50;
             dataGridView1.Columns["8"].Width = 50;
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox12.KeyDown += RichTextBox12_KeyDown;
+            richTextBox11.KeyDown += RichTextBox12_KeyDown;
+            richTextBox10.KeyDown += RichTextBox12_KeyDown;
+            richTextBox9.KeyDown += RichTextBox12_KeyDown;
+            richTextBox8.KeyDown += RichTextBox12_KeyDown;
+            richTextBox7.KeyDown += RichTextBox12_KeyDown;
+            richTextBox6.KeyDown += RichTextBox12_KeyDown;
+            richTextBox5.KeyDown += RichTextBox12_KeyDown;
+        }
+
+        private void RichTextBox12_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode!=Keys.Back && e.KeyCode!=Keys.A && e.KeyCode!=Keys.B && e.KeyCode!=Keys.C && e.KeyCode!=Keys.D && e.KeyCode!=Keys.E && e.KeyCode != Keys.F && e.KeyCode != Keys.G && e.KeyCode != Keys.A && e.KeyCode != Keys.B && e.KeyCode != Keys.OemPeriod && e.KeyCode != Keys.D4 && e.KeyCode != Keys.D5 && e.KeyCode != Keys.D6)
+            {
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void clear_all_textbox()
@@ -192,7 +212,7 @@ namespace Nhap
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            /*switch (e.KeyCode)
             {
                 case Keys.Q: C4.Play(); break;
                 case Keys.W: D4.Play(); break;
@@ -209,9 +229,8 @@ namespace Nhap
                 case Keys.C: A5.Play(); break;
                 case Keys.V: B5.Play(); break;
                 case Keys.B: C6.Play(); break;
-            }
+            }*/
         }
-
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
@@ -254,19 +273,37 @@ namespace Nhap
             dataGridView1.AllowUserToAddRows = true;
             dataGridView1.AllowUserToDeleteRows = true;
         }
-
+        private bool check_StringInBox(RichTextBox a)
+        {
+            if (a.Text == "C4" ||a.Text == "D4" ||a.Text == "E4" || a.Text == "F4" ||a.Text == "G4" || a.Text == "A4" || a.Text == "B4" ||a.Text=="C5"|| a.Text == "D5" || a.Text == "E5" || a.Text == "F5" || a.Text == "G5" || a.Text == "A5" || a.Text == "B5" || a.Text == "C6" || a.Text == "."||a.Text=="")
+                return true;
+            else if (a.Text == "c4" || a.Text == "d4" || a.Text == "e4" || a.Text == "f4" || a.Text == "g4" || a.Text == "a4" || a.Text == "b4" || a.Text == "c5" || a.Text == "d5" || a.Text == "e5" || a.Text == "f5" || a.Text == "g5" || a.Text == "a5" || a.Text == "b5" || a.Text == "c6" || a.Text == "." || a.Text == "")
+                   return true;
+            return false;
+        }
         private void button21_Click(object sender, EventArgs e) // save button
         {
-            DataRow row = NotNhac.NewRow();
-            row["1"] = richTextBox12.Text;
-            row["2"] = richTextBox11.Text;
-            row["3"] = richTextBox10.Text;
-            row["4"] = richTextBox9.Text;
-            row["5"] = richTextBox8.Text;
-            row["6"] = richTextBox7.Text;
-            row["7"] = richTextBox6.Text;
-            row["8"] = richTextBox5.Text;
-            NotNhac.Rows.Add(row);
+            int flag = 0;
+            if (check_StringInBox(richTextBox12)&& check_StringInBox(richTextBox11)&& check_StringInBox(richTextBox10)&& check_StringInBox(richTextBox9)&& check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
+                flag = 1;
+            if (flag==0)
+            {
+                MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+            }
+            else
+            {
+                DataRow row = NotNhac.NewRow();
+                row["1"] = richTextBox12.Text;
+                row["2"] = richTextBox11.Text;
+                row["3"] = richTextBox10.Text;
+                row["4"] = richTextBox9.Text;
+                row["5"] = richTextBox8.Text;
+                row["6"] = richTextBox7.Text;
+                row["7"] = richTextBox6.Text;
+                row["8"] = richTextBox5.Text;
+                NotNhac.Rows.Add(row);
+                richTextBox12.Text=richTextBox11.Text=richTextBox10.Text=richTextBox9.Text=richTextBox8.Text=richTextBox7.Text=richTextBox6.Text=richTextBox5.Text="";
+            }
         }
     }
 }
