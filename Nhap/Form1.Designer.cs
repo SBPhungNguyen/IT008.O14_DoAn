@@ -430,10 +430,10 @@
             this.button21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button21.BackColor = System.Drawing.Color.Silver;
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(940, 170);
+            this.button21.Location = new System.Drawing.Point(932, 295);
             this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(100, 54);
+            this.button21.Size = new System.Drawing.Size(100, 48);
             this.button21.TabIndex = 8;
             this.button21.Text = "Save";
             this.button21.UseVisualStyleBackColor = false;
@@ -444,10 +444,10 @@
             this.button22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button22.BackColor = System.Drawing.Color.Silver;
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(940, 249);
+            this.button22.Location = new System.Drawing.Point(932, 106);
             this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(100, 54);
+            this.button22.Size = new System.Drawing.Size(97, 48);
             this.button22.TabIndex = 9;
             this.button22.Text = "Edit";
             this.button22.UseVisualStyleBackColor = false;
@@ -456,7 +456,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.Location = new System.Drawing.Point(940, 329);
+            this.richTextBox1.Location = new System.Drawing.Point(932, 172);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(97, 52);
@@ -495,7 +495,7 @@
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.richTextBox4.Location = new System.Drawing.Point(0, 44);
+            this.richTextBox4.Location = new System.Drawing.Point(0, 32);
             this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;

@@ -289,25 +289,30 @@ namespace Nhap
                 button16.BackgroundImage = Properties.Resources.Pause_Button;
                 if (richTextBox3.Text == "")
                     richTextBox3.Text = "120";
-
+                //
                 tempo = int.Parse(richTextBox3.Text);
-                timer1.Interval = tempo/2;
+                float exchange = (((float)30 /tempo))*1000;
+
+                timer1.Interval = (int)(exchange);              
+
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     for (int j=0; j<row.Cells.Count;j++)
                     {
-                        notes[lines] = "" + row.Cells[j].Value;
-                        lines++;
+                        if (row.Cells[j].Value!="")
+                        {
+                            notes[lines] = "" + row.Cells[j].Value;
+                            lines++;
+                        }
                     }
 
                 }
-                //
                 timer1.Start();
-                //
 
             }
             else //pause
             {
+                timer1.Stop();
                 dataGridView1.AllowUserToDeleteRows = true;
                 button21.Enabled = true;
                 button22.Enabled = true;
@@ -388,7 +393,7 @@ namespace Nhap
                     case "a5": A5.Play(); break;
                     case "b5": B5.Play(); break;
                     case "c6": C6.Play(); break;
-                    default: break;
+                    case "": break;
                 }
                 timer_playing++;
             }
