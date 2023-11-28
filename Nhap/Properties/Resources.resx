@@ -181,4 +181,7 @@
   <data name="Curved_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Curved_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pause_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

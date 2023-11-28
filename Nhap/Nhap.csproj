@@ -140,5 +140,8 @@
   <ItemGroup>
     <None Include="Resources\Curved_Note.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

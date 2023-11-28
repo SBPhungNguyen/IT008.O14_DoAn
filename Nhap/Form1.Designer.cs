@@ -315,7 +315,7 @@
             this.button20.BackgroundImage = global::Nhap.Properties.Resources.Curved_Note;
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button20.Location = new System.Drawing.Point(16, 423);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(67, 50);
             this.button20.TabIndex = 6;
@@ -329,7 +329,7 @@
             this.button19.BackgroundImage = global::Nhap.Properties.Resources.Black_Note;
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button19.Location = new System.Drawing.Point(16, 364);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(67, 50);
             this.button19.TabIndex = 5;
@@ -343,7 +343,7 @@
             this.button18.BackgroundImage = global::Nhap.Properties.Resources.White_Note;
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button18.Location = new System.Drawing.Point(16, 306);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(67, 50);
             this.button18.TabIndex = 4;
@@ -357,7 +357,7 @@
             this.button17.BackgroundImage = global::Nhap.Properties.Resources.Round_Note;
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button17.Location = new System.Drawing.Point(16, 249);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(67, 50);
             this.button17.TabIndex = 3;
@@ -371,7 +371,7 @@
             this.button16.BackgroundImage = global::Nhap.Properties.Resources.Play_Button;
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button16.Location = new System.Drawing.Point(16, 170);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(67, 54);
             this.button16.TabIndex = 2;
@@ -387,7 +387,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1056, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -398,7 +398,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -422,7 +422,7 @@
             // guideToolStripMenuItem
             // 
             this.guideToolStripMenuItem.Name = "guideToolStripMenuItem";
-            this.guideToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.guideToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.guideToolStripMenuItem.Text = "Guide";
             // 
             // button21
@@ -431,7 +431,7 @@
             this.button21.BackColor = System.Drawing.Color.Silver;
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.Location = new System.Drawing.Point(940, 170);
-            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(100, 54);
             this.button21.TabIndex = 8;
@@ -445,7 +445,7 @@
             this.button22.BackColor = System.Drawing.Color.Silver;
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.Location = new System.Drawing.Point(940, 249);
-            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(100, 54);
             this.button22.TabIndex = 9;
@@ -457,7 +457,7 @@
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox1.Location = new System.Drawing.Point(940, 329);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(97, 52);
             this.richTextBox1.TabIndex = 10;
@@ -469,7 +469,7 @@
             this.richTextBox2.BackColor = System.Drawing.Color.Silver;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(133, 106);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(91, 34);
@@ -480,8 +480,9 @@
             // 
             this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox3.BackColor = System.Drawing.Color.White;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(213, 106);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(91, 34);
             this.richTextBox3.TabIndex = 12;
@@ -495,7 +496,7 @@
             this.richTextBox4.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.richTextBox4.Location = new System.Drawing.Point(0, 44);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox4.Size = new System.Drawing.Size(1056, 54);
@@ -508,7 +509,7 @@
             this.richTextBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox5.Location = new System.Drawing.Point(549, 295);
-            this.richTextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox5.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.Size = new System.Drawing.Size(76, 48);
             this.richTextBox5.TabIndex = 14;
@@ -519,7 +520,7 @@
             this.richTextBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox6.Location = new System.Drawing.Point(635, 295);
-            this.richTextBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox6.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.Size = new System.Drawing.Size(76, 48);
             this.richTextBox6.TabIndex = 15;
@@ -530,7 +531,7 @@
             this.richTextBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox7.Location = new System.Drawing.Point(720, 295);
-            this.richTextBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox7.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox7.Name = "richTextBox7";
             this.richTextBox7.Size = new System.Drawing.Size(76, 48);
             this.richTextBox7.TabIndex = 16;
@@ -541,7 +542,7 @@
             this.richTextBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox8.Location = new System.Drawing.Point(805, 295);
-            this.richTextBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox8.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox8.Name = "richTextBox8";
             this.richTextBox8.Size = new System.Drawing.Size(76, 48);
             this.richTextBox8.TabIndex = 17;
@@ -549,10 +550,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(309, 106);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 48;
             this.dataGridView1.Size = new System.Drawing.Size(580, 148);
@@ -565,7 +569,7 @@
             this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.Location = new System.Drawing.Point(16, 482);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(67, 50);
             this.button23.TabIndex = 19;
@@ -573,12 +577,16 @@
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // richTextBox9
             // 
             this.richTextBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox9.Location = new System.Drawing.Point(433, 295);
-            this.richTextBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox9.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox9.Name = "richTextBox9";
             this.richTextBox9.Size = new System.Drawing.Size(76, 48);
             this.richTextBox9.TabIndex = 23;
@@ -589,7 +597,7 @@
             this.richTextBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox10.Location = new System.Drawing.Point(347, 295);
-            this.richTextBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox10.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox10.Name = "richTextBox10";
             this.richTextBox10.Size = new System.Drawing.Size(76, 48);
             this.richTextBox10.TabIndex = 22;
@@ -600,7 +608,7 @@
             this.richTextBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox11.Location = new System.Drawing.Point(263, 295);
-            this.richTextBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox11.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox11.Name = "richTextBox11";
             this.richTextBox11.Size = new System.Drawing.Size(76, 48);
             this.richTextBox11.TabIndex = 21;
@@ -611,7 +619,7 @@
             this.richTextBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox12.Location = new System.Drawing.Point(177, 295);
-            this.richTextBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox12.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox12.Name = "richTextBox12";
             this.richTextBox12.Size = new System.Drawing.Size(76, 48);
             this.richTextBox12.TabIndex = 20;
@@ -700,13 +708,13 @@
         private System.Windows.Forms.RichTextBox richTextBox6;
         private System.Windows.Forms.RichTextBox richTextBox7;
         private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.RichTextBox richTextBox10;
         private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.RichTextBox richTextBox12;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

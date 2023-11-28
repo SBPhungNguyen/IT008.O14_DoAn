@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,12 @@ namespace Nhap
 {
     public partial class Form1 : Form
     {
+        int is_playing = 0;
+        int tempo;
         int not = -1;
+        string[] notes = new string [10000];
+        int lines = 0;
+        int timer_playing = 0;
         DataTable NotNhac = new DataTable();
         System.Media.SoundPlayer C4 = new System.Media.SoundPlayer(Properties.Resources.a84);   //  DO_4
         System.Media.SoundPlayer D4 = new System.Media.SoundPlayer(Properties.Resources.a89);   //  RE_4
@@ -58,6 +64,7 @@ namespace Nhap
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
+            dataGridView1.AllowUserToAddRows = false;
             richTextBox12.KeyDown += RichTextBox12_KeyDown;
             richTextBox11.KeyDown += RichTextBox12_KeyDown;
             richTextBox10.KeyDown += RichTextBox12_KeyDown;
@@ -66,6 +73,15 @@ namespace Nhap
             richTextBox7.KeyDown += RichTextBox12_KeyDown;
             richTextBox6.KeyDown += RichTextBox12_KeyDown;
             richTextBox5.KeyDown += RichTextBox12_KeyDown;
+            richTextBox3.KeyDown += RichTextBox3_KeyDown;
+        }
+
+        private void RichTextBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!char.IsDigit((char)e.KeyCode) && e.KeyCode != Keys.Back && e.KeyCode != Keys.Left && e.KeyCode != Keys.Right)
+            {
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void RichTextBox12_KeyDown(object sender, KeyEventArgs e)
@@ -264,14 +280,44 @@ namespace Nhap
         }
         private void button16_Click(object sender, EventArgs e) // play button
         {
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
+            is_playing++;
+            if (is_playing%2==1) // is playing
+            {
+                dataGridView1.AllowUserToDeleteRows = false;
+                button21.Enabled = false;
+                button22.Enabled = false;
+                button16.BackgroundImage = Properties.Resources.Pause_Button;
+                if (richTextBox3.Text == "")
+                    richTextBox3.Text = "120";
 
-            int tempo = Convert.ToInt32(richTextBox3.Text);
-            timer1.Interval = tempo;
+                tempo = int.Parse(richTextBox3.Text);
+                timer1.Interval = tempo/2;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    for (int j=0; j<row.Cells.Count;j++)
+                    {
+                        notes[lines] = "" + row.Cells[j].Value;
+                        lines++;
+                    }
 
-            dataGridView1.AllowUserToAddRows = true;
-            dataGridView1.AllowUserToDeleteRows = true;
+                }
+                //
+                timer1.Start();
+                //
+
+            }
+            else //pause
+            {
+                dataGridView1.AllowUserToDeleteRows = true;
+                button21.Enabled = true;
+                button22.Enabled = true;
+                button16.BackgroundImage = Properties.Resources.Play_Button;
+                for (int j = 0; j <= lines; j++)
+                    notes[lines] = "";
+                lines = 0;
+                timer_playing = 0;
+            }
+
         }
         private bool check_StringInBox(RichTextBox a)
         {
@@ -304,6 +350,49 @@ namespace Nhap
                 NotNhac.Rows.Add(row);
                 richTextBox12.Text=richTextBox11.Text=richTextBox10.Text=richTextBox9.Text=richTextBox8.Text=richTextBox7.Text=richTextBox6.Text=richTextBox5.Text="";
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (is_playing%2==1)
+            {
+                switch(notes[timer_playing])
+                {
+                    case "C4": C4.Play(); break;
+                    case "D4": D4.Play(); break;
+                    case "E4": E4.Play(); break;
+                    case "F4": F4.Play(); break;
+                    case "G4": G4.Play(); break;
+                    case "A4": A4.Play(); break;
+                    case "B4": B4.Play(); break;
+                    case "C5": C5.Play(); break;
+                    case "D5": D5.Play(); break;
+                    case "E5": E5.Play(); break;
+                    case "F5": F5.Play(); break;
+                    case "G5": G5.Play(); break;
+                    case "A5": A5.Play(); break;
+                    case "B5": B5.Play(); break;
+                    case "C6": C6.Play(); break;
+                    case "c4": C4.Play(); break;
+                    case "d4": D4.Play(); break;
+                    case "e4": E4.Play(); break;
+                    case "f4": F4.Play(); break;
+                    case "g4": G4.Play(); break;
+                    case "a4": A4.Play(); break;
+                    case "b4": B4.Play(); break;
+                    case "c5": C5.Play(); break;
+                    case "d5": D5.Play(); break;
+                    case "e5": E5.Play(); break;
+                    case "f5": F5.Play(); break;
+                    case "g5": G5.Play(); break;
+                    case "a5": A5.Play(); break;
+                    case "b5": B5.Play(); break;
+                    case "c6": C6.Play(); break;
+                    default: break;
+                }
+                timer_playing++;
+            }
+
         }
     }
 }
