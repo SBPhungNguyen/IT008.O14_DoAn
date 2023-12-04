@@ -20,6 +20,8 @@ namespace Nhap
         string[] notes = new string [10000];
         int lines = 0;
         int timer_playing = 0;
+        int editedrowindex = -1;
+        int edit = 0;
         DataTable NotNhac = new DataTable();
         System.Media.SoundPlayer C4 = new System.Media.SoundPlayer(Properties.Resources.a84);   //  DO_4
         System.Media.SoundPlayer D4 = new System.Media.SoundPlayer(Properties.Resources.a89);   //  RE_4
@@ -51,19 +53,20 @@ namespace Nhap
             NotNhac.Columns.Add("7", typeof(string));
             NotNhac.Columns.Add("8", typeof(string));
             dataGridView1.DataSource = NotNhac;
-            dataGridView1.Columns["1"].Width = 50;
-            dataGridView1.Columns["2"].Width = 50;
-            dataGridView1.Columns["3"].Width = 50;
-            dataGridView1.Columns["4"].Width = 50;
-            dataGridView1.Columns["5"].Width = 50;
-            dataGridView1.Columns["6"].Width = 50;
-            dataGridView1.Columns["7"].Width = 50;
-            dataGridView1.Columns["8"].Width = 50;
+            dataGridView1.Columns["1"].Width = 48;
+            dataGridView1.Columns["2"].Width = 48;
+            dataGridView1.Columns["3"].Width = 48;
+            dataGridView1.Columns["4"].Width = 48;
+            dataGridView1.Columns["5"].Width = 48;
+            dataGridView1.Columns["6"].Width = 48;
+            dataGridView1.Columns["7"].Width = 48;
+            dataGridView1.Columns["8"].Width = 48;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.AllowUserToAddRows = false;
             richTextBox12.KeyDown += RichTextBox12_KeyDown;
             richTextBox11.KeyDown += RichTextBox12_KeyDown;
@@ -228,7 +231,7 @@ namespace Nhap
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            /*switch (e.KeyCode)
+            switch (e.KeyCode)
             {
                 case Keys.Q: C4.Play(); break;
                 case Keys.W: D4.Play(); break;
@@ -245,7 +248,7 @@ namespace Nhap
                 case Keys.C: A5.Play(); break;
                 case Keys.V: B5.Play(); break;
                 case Keys.B: C6.Play(); break;
-            }*/
+            }
         }
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
@@ -307,6 +310,7 @@ namespace Nhap
                     }
 
                 }
+                timer_playing = 0;
                 timer1.Start();
 
             }
@@ -321,8 +325,8 @@ namespace Nhap
                     notes[lines] = "";
                 lines = 0;
                 timer_playing = 0;
+                Array.Clear(notes, 0, notes.Length);
             }
-
         }
         private bool check_StringInBox(RichTextBox a)
         {
@@ -334,16 +338,33 @@ namespace Nhap
         }
         private void button21_Click(object sender, EventArgs e) // save button
         {
-            int flag = 0;
-            if (check_StringInBox(richTextBox12)&& check_StringInBox(richTextBox11)&& check_StringInBox(richTextBox10)&& check_StringInBox(richTextBox9)&& check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
-                flag = 1;
-            if (flag==0)
+            if (edit == 0) //them moi binh thuong
             {
-                MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+                int flag = 0;
+                if (check_StringInBox(richTextBox12) && check_StringInBox(richTextBox11) && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
+                    flag = 1;
+                if (flag == 0)
+                {
+                    MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+                }
+                else
+                {
+                    DataRow row = NotNhac.NewRow();
+                    row["1"] = richTextBox12.Text;
+                    row["2"] = richTextBox11.Text;
+                    row["3"] = richTextBox10.Text;
+                    row["4"] = richTextBox9.Text;
+                    row["5"] = richTextBox8.Text;
+                    row["6"] = richTextBox7.Text;
+                    row["7"] = richTextBox6.Text;
+                    row["8"] = richTextBox5.Text;
+                    NotNhac.Rows.Add(row);
+                    richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+                }
             }
-            else
+            else //sua dong chinh xac
             {
-                DataRow row = NotNhac.NewRow();
+                DataRow row = NotNhac.Rows[editedrowindex];
                 row["1"] = richTextBox12.Text;
                 row["2"] = richTextBox11.Text;
                 row["3"] = richTextBox10.Text;
@@ -352,14 +373,21 @@ namespace Nhap
                 row["6"] = richTextBox7.Text;
                 row["7"] = richTextBox6.Text;
                 row["8"] = richTextBox5.Text;
-                NotNhac.Rows.Add(row);
-                richTextBox12.Text=richTextBox11.Text=richTextBox10.Text=richTextBox9.Text=richTextBox8.Text=richTextBox7.Text=richTextBox6.Text=richTextBox5.Text="";
+                richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+                edit = 0;
             }
         }
 
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) //xoa dong
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < NotNhac.Rows.Count)
+            {
+                NotNhac.Rows.RemoveAt(e.RowIndex);
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (is_playing%2==1)
+            if (is_playing%2==1&&timer_playing < lines)
             {
                 switch(notes[timer_playing])
                 {
@@ -397,7 +425,39 @@ namespace Nhap
                 }
                 timer_playing++;
             }
+            else if (timer_playing >= lines)
+            {
+                is_playing++;
+                timer1.Stop();
+                dataGridView1.AllowUserToDeleteRows = true;
+                button21.Enabled = true;
+                button22.Enabled = true;
+                button16.BackgroundImage = Properties.Resources.Play_Button;
+                for (int j = 0; j <= lines; j++)
+                    notes[lines] = "";
+                lines = 0;
+                timer_playing = 0;
+                Array.Clear(notes, 0, notes.Length);
+            }
+        }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            DataRow row;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                editedrowindex = dataGridView1.SelectedRows[0].Index;
+                DataRow editedRow = ((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row;
+                edit = 1;
+                richTextBox12.Text = editedRow["1"].ToString();
+                richTextBox11.Text = editedRow["2"].ToString();
+                richTextBox10.Text = editedRow["3"].ToString();
+                richTextBox9.Text = editedRow["4"].ToString();
+                richTextBox5.Text = editedRow["5"].ToString();
+                richTextBox6.Text = editedRow["6"].ToString();
+                richTextBox7.Text = editedRow["7"].ToString();
+                richTextBox8.Text = editedRow["8"].ToString();
+            }
         }
     }
 }
