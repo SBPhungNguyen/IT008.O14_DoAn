@@ -484,5 +484,55 @@ namespace Nhap
                 }
             }
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = @"C:\My Documents";
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Open A Sheet";
+            openFileDialog.ShowDialog();
+            string filePath = openFileDialog.FileName;
+
+            // Xoa nhung thu dang co trong dataGridView1
+            if (NotNhac.Rows.Count > 0)
+                NotNhac.Rows.Clear();
+
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    DataRow row = NotNhac.NewRow();
+                    if (line[0].ToString() == ".") // dau cham doi
+                    {
+                        row["1"] = ".";
+                        row["2"] = ".";
+                        row["3"] = ".";
+                        row["4"] = ".";
+                        row["5"] = ".";
+                        row["6"] = ".";
+                        row["7"] = ".";
+                        row["8"] = ".";
+                        NotNhac.Rows.Add(row);
+                    }
+                    else // cac not binh thuong
+                    {  
+                        row["1"] = line[0].ToString() + line[1].ToString();
+                        int length_of_line = line.Length;
+                        for (int i = 2; i < length_of_line; i++)
+                        {
+                            row[i-1] = line[i].ToString();
+                        }
+                        for (int i = length_of_line; i < 8; i++)
+                        {
+                            row[i] = "";
+                        }
+                        NotNhac.Rows.Add(row);
+                    }
+                }
+            }
+        }
     }
 }
