@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
@@ -457,6 +458,30 @@ namespace Nhap
                 richTextBox6.Text = editedRow["6"].ToString();
                 richTextBox7.Text = editedRow["7"].ToString();
                 richTextBox8.Text = editedRow["8"].ToString();
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) // File -> Save
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            saveFileDialog1.Title = "Save Your Sheet";
+            saveFileDialog1.FileName = richTextBox4.Text + ".txt";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                string filePath = saveFileDialog1.FileName;
+                
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        for (int i = 0; i < 8; i++)
+                            writer.Write(row.Cells[i].Value.ToString());
+                        writer.Write("\n");
+                    }
+                }
             }
         }
     }
