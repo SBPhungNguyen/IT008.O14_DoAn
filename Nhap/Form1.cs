@@ -256,10 +256,6 @@ namespace Nhap
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button17_Click(object sender, EventArgs e) // not tron
         {
@@ -289,7 +285,7 @@ namespace Nhap
             {
                 dataGridView1.AllowUserToDeleteRows = false;
                 button21.Enabled = false;
-                button22.Enabled = false;
+                //button22.Enabled = false;
                 button16.BackgroundImage = Properties.Resources.Pause_Button;
                 if (richTextBox3.Text == "")
                     richTextBox3.Text = "120";
@@ -320,7 +316,7 @@ namespace Nhap
                 timer1.Stop();
                 dataGridView1.AllowUserToDeleteRows = true;
                 button21.Enabled = true;
-                button22.Enabled = true;
+                //button22.Enabled = true;
                 button16.BackgroundImage = Properties.Resources.Play_Button;
                 for (int j = 0; j <= lines; j++)
                     notes[lines] = "";
@@ -432,7 +428,7 @@ namespace Nhap
                 timer1.Stop();
                 dataGridView1.AllowUserToDeleteRows = true;
                 button21.Enabled = true;
-                button22.Enabled = true;
+                //button22.Enabled = true;
                 button16.BackgroundImage = Properties.Resources.Play_Button;
                 for (int j = 0; j <= lines; j++)
                     notes[lines] = "";
@@ -487,6 +483,7 @@ namespace Nhap
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog.InitialDirectory = @"C:\My Documents";
