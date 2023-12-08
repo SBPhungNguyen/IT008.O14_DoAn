@@ -230,6 +230,11 @@ namespace Nhap
             display_on_textbox("C6");
         }
 
+        private void button23_Click(object sender, EventArgs e) // not lang
+        {
+            display_on_textbox("."); // display luon, ko can doi user chon cao do
+        }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -273,11 +278,7 @@ namespace Nhap
         {
             not = 1;
         }
-        private void button23_Click(object sender, EventArgs e) // not lang
-        {
-            not = 0;
-            display_on_textbox(""); // display luon, ko can doi user chon cao do
-        }
+        
         private void button16_Click(object sender, EventArgs e) // play button
         {
             is_playing++;
@@ -506,13 +507,11 @@ namespace Nhap
                         if (line[0].ToString() == ".") // dau cham doi
                         {
                             row["1"] = ".";
-                            row["2"] = ".";
-                            row["3"] = ".";
-                            row["4"] = ".";
-                            row["5"] = ".";
-                            row["6"] = ".";
-                            row["7"] = ".";
-                            row["8"] = ".";
+                            int length_of_line = line.Length;
+                            for (int i = 1; i < length_of_line; i++)
+                                row[i] = line[i].ToString();
+                            for (int i = length_of_line; i < 8; i++)
+                                row[i] = "";
                             NotNhac.Rows.Add(row);
                         }
                         else // cac not binh thuong
@@ -528,6 +527,13 @@ namespace Nhap
                     }
                 }
             } 
+        }
+
+        private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            editedrowindex = -1;
+            edit = 0;
+            richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
         }
     }
 }
