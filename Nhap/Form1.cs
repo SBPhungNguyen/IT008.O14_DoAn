@@ -460,6 +460,10 @@ namespace Nhap
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e) // File -> Save
         {
+            
+        }
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e) // File -> Export
+        {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             saveFileDialog1.Title = "Save Your Sheet";
@@ -469,7 +473,7 @@ namespace Nhap
             if (saveFileDialog1.FileName != "")
             {
                 string filePath = saveFileDialog1.FileName;
-                
+
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
                     foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -535,5 +539,13 @@ namespace Nhap
             edit = 0;
             richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            Environment.Exit(0);
+        }
+
+        
     }
 }
