@@ -15,18 +15,18 @@ namespace Nhap
 {
     public partial class Signup : Form
     {
+        //THAY DOI TEN SERVER O CONNECTIONINFO.CS TRUOC KHI CHAY:
+        SqlConnection connection;
+
         string username = "";
         string password = "";
         string password2 = "";
 
-        //Thay doi DATASOURCE cho phu hop voi may truoc khi chay:
-        
-        //static String connString = @"Data Source=F;Initial Catalog=MusicLogin;Integrated Security=True";
-        //SqlConnection connection = new SqlConnection(connString);
-
         public Signup()
         {
             InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
         }
         private static string GetHash(string input)

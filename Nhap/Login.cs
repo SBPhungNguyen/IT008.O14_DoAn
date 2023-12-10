@@ -11,15 +11,16 @@ namespace Nhap
         string username = "";
         string password = "";
 
-        // Thay doi DATASOURCE = cho phu hop voi may truoc khi chay:
+        //THAY DOI TEN SERVER O CONNECTIONINFO.CS TRUOC KHI CHAY:
+        SqlConnection connection;
 
-        //static String connString = @"Data Source=F;Initial Catalog=MusicLogin;Integrated Security=True";
-        //SqlConnection connection = new SqlConnection(connString);
         bool check = false;
 
         public Login()
         {
             InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
         }
 
@@ -40,13 +41,12 @@ namespace Nhap
         private void button1_Click(object sender, EventArgs e)
         {
             username = textBox1.Text;
-            password = GetHash(textBox2.Text); // Hash the entered password
+            password = GetHash(textBox2.Text); 
 
-            // Use parameterized query to avoid SQL injection
             String sqlQuery = "SELECT Username, Password FROM [MusicLogin].[dbo].[Account] WHERE Username = @Username AND Password = @Password";
 
             SqlCommand command = new SqlCommand(sqlQuery, connection);
-            // Add parameters to the query
+            
             command.Parameters.AddWithValue("@Username", username);
             command.Parameters.AddWithValue("@Password", password);
 
@@ -54,16 +54,13 @@ namespace Nhap
 
             if (reader.Read())
             {
-                // Authentication successful
-                MessageBox.Show("Login Successful!");
                 reader.Close();
                 this.Hide();
-                Form Form1 = new Form1();
+                Form Form1 = new Form1(username);
                 Form1.Show();
             }
             else
             {
-                // Authentication failed
                 MessageBox.Show("Login Failed. Invalid username or password.");
                 reader.Close();
             }

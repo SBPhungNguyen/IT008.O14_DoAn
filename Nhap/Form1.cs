@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,11 +11,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Nhap
 {
     public partial class Form1 : Form
     {
+        //THAY DOI TEN SERVER O CONNECTIONINFO.CS TRUOC KHI CHAY:
+        SqlConnection connection;
+
+        string User;
         int is_playing = 0;
         int tempo;
         int not = -1;
@@ -41,10 +47,18 @@ namespace Nhap
         System.Media.SoundPlayer C6 = new System.Media.SoundPlayer(Properties.Resources.a76);   //  DO_6
         private RichTextBox check_NoteTextbox_Keydown;
 
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            connection.Open();
             this.KeyPreview = true;
+            User = "";
+            if (username != null)
+            {
+                User = username;
+            }
             NotNhac.Columns.Add("1", typeof(string));
             NotNhac.Columns.Add("2", typeof(string));
             NotNhac.Columns.Add("3", typeof(string));
@@ -62,6 +76,70 @@ namespace Nhap
             dataGridView1.Columns["6"].Width = 48;
             dataGridView1.Columns["7"].Width = 48;
             dataGridView1.Columns["8"].Width = 48;
+        }
+
+        public Form1(string username, string sheetname, string sheetdetails)
+        {
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            SqlConnection connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            InitializeComponent();
+            connection.Open();
+            this.KeyPreview = true;
+            User = "";
+            if (username != null)
+            {
+                User = username;
+            }
+            NotNhac.Columns.Add("1", typeof(string));
+            NotNhac.Columns.Add("2", typeof(string));
+            NotNhac.Columns.Add("3", typeof(string));
+            NotNhac.Columns.Add("4", typeof(string));
+            NotNhac.Columns.Add("5", typeof(string));
+            NotNhac.Columns.Add("6", typeof(string));
+            NotNhac.Columns.Add("7", typeof(string));
+            NotNhac.Columns.Add("8", typeof(string));
+            dataGridView1.DataSource = NotNhac;
+            dataGridView1.Columns["1"].Width = 48;
+            dataGridView1.Columns["2"].Width = 48;
+            dataGridView1.Columns["3"].Width = 48;
+            dataGridView1.Columns["4"].Width = 48;
+            dataGridView1.Columns["5"].Width = 48;
+            dataGridView1.Columns["6"].Width = 48;
+            dataGridView1.Columns["7"].Width = 48;
+            dataGridView1.Columns["8"].Width = 48;
+            richTextBox4.Text = sheetname;
+            string inputString = sheetdetails;
+
+            using (StringReader reader = new StringReader(inputString))
+            {
+                string line;
+                DataRow row2 = NotNhac.NewRow();
+                NotNhac.Rows.Add(row2);
+                while ((line = reader.ReadLine()) != null)
+                {
+                    DataRow row = NotNhac.NewRow();
+                    if (line[0].ToString() == ".") // dau cham doi
+                    {
+                        row["1"] = ".";
+                        int length_of_line = line.Length;
+                        for (int i = 1; i < length_of_line; i++)
+                            row[i] = line[i].ToString();
+                        for (int i = length_of_line; i < 8; i++)
+                            row[i] = "";
+                        NotNhac.Rows.Add(row);
+                    }
+                    else // cac not binh thuong
+                    {
+                        row["1"] = line[0].ToString() + line[1].ToString();
+                        int length_of_line = line.Length;
+                        for (int i = 2; i < length_of_line; i++)
+                            row[i - 1] = line[i].ToString();
+                        for (int i = length_of_line; i < 8; i++)
+                            row[i] = "";
+                        NotNhac.Rows.Add(row);
+                    }
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -457,11 +535,12 @@ namespace Nhap
                 richTextBox8.Text = editedRow["8"].ToString();
             }
         }
-
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e) // File -> Save
+        ////////////////////////////////////////////
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
         }
+        ////////////////////////////////////////////
         private void exportToolStripMenuItem_Click(object sender, EventArgs e) // File -> Export
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -489,6 +568,9 @@ namespace Nhap
         private void openToolStripMenuItem_Click(object sender, EventArgs e) // File -> Open
         {
             
+        }
+        private void fromFileToolStripMenuItem_Click(object sender, EventArgs e) // File -> Open from File
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog.InitialDirectory = @"C:\My Documents";
@@ -530,9 +612,8 @@ namespace Nhap
                         }
                     }
                 }
-            } 
+            }
         }
-
         private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             editedrowindex = -1;
@@ -546,6 +627,42 @@ namespace Nhap
             Environment.Exit(0);
         }
 
-        
+        private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Select = new Select(User);
+            Select.Show();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to create a new blank Music Sheet and clear current Music Sheet??", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                richTextBox4.Text = "[Name Your Song]";
+                NotNhac = new DataTable();
+                NotNhac.Columns.Add("1", typeof(string));
+                NotNhac.Columns.Add("2", typeof(string));
+                NotNhac.Columns.Add("3", typeof(string));
+                NotNhac.Columns.Add("4", typeof(string));
+                NotNhac.Columns.Add("5", typeof(string));
+                NotNhac.Columns.Add("6", typeof(string));
+                NotNhac.Columns.Add("7", typeof(string));
+                NotNhac.Columns.Add("8", typeof(string));
+                dataGridView1.DataSource = NotNhac;
+                dataGridView1.Columns["1"].Width = 48;
+                dataGridView1.Columns["2"].Width = 48;
+                dataGridView1.Columns["3"].Width = 48;
+                dataGridView1.Columns["4"].Width = 48;
+                dataGridView1.Columns["5"].Width = 48;
+                dataGridView1.Columns["6"].Width = 48;
+                dataGridView1.Columns["7"].Width = 48;
+                dataGridView1.Columns["8"].Width = 48;
+            }
+        }
     }
 }
