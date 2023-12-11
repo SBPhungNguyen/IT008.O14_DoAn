@@ -538,7 +538,71 @@ namespace Nhap
         ////////////////////////////////////////////
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    stringBuilder.Append(row.Cells[i].Value.ToString());
+                    stringBuilder.Append("");
+                }
+                stringBuilder.Append("\n");
+            }
+            string bigString = stringBuilder.ToString();
+            //
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            SqlConnection connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            //
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
+            //
+            String checkIfExistsQuery = "SELECT COUNT(*) FROM [MusicLogin].[dbo].[AccountAccess] WHERE Username = @Username AND SheetName = @SheetName";
+
+            SqlCommand checkIfExistsCommand = new SqlCommand(checkIfExistsQuery, connection);
+
+            checkIfExistsCommand.Parameters.AddWithValue("@Username", User);
+            checkIfExistsCommand.Parameters.AddWithValue("@SheetName", richTextBox4.Text);
+
+            int existingRecordCount = (int)checkIfExistsCommand.ExecuteScalar();
+
+            if (existingRecordCount > 0)
+            {
+                DialogResult result = MessageBox.Show("A record with the same Username and SheetName already exists. Do you want to replace the SheetDetails?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            String updateQuery = "UPDATE [MusicLogin].[dbo].[AccountAccess] SET SheetDetails = @SheetDetails WHERE Username = @Username AND SheetName = @SheetName";
+
+            SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+
+            updateCommand.Parameters.AddWithValue("@Username", User);
+            updateCommand.Parameters.AddWithValue("@SheetName", richTextBox4.Text);
+            updateCommand.Parameters.AddWithValue("@SheetDetails", bigString);
+
+            try
+            {
+                if (existingRecordCount > 0)
+                {
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show(richTextBox4.Text + " updated successfully!", "Updated!");
+                }
+                else
+                {
+                    updateCommand.CommandText = "INSERT INTO [MusicLogin].[dbo].[AccountAccess] (Username, SheetName, SheetDetails) VALUES (@Username, @SheetName, @SheetDetails)";
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show("Saved successfully!", "Saved!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            connection.Close();
         }
         ////////////////////////////////////////////
         private void exportToolStripMenuItem_Click(object sender, EventArgs e) // File -> Export
