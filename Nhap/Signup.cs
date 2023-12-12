@@ -68,7 +68,7 @@ namespace Nhap
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Sign-up Failed. Error: " + ex.Message);
+                    MessageBox.Show("This Username already exists");
                 }
                 this.Close();
             }
