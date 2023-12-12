@@ -61,7 +61,7 @@ namespace Nhap
             }
             else
             {
-                MessageBox.Show("Login Failed. Invalid username or password.");
+                MessageBox.Show("Login Failed. Invalid username or password.", "Login Failed.");
                 reader.Close();
             }
         }

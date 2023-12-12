@@ -64,17 +64,17 @@ namespace Nhap
                 try
                 {
                     signUpCommand.ExecuteNonQuery();
-                    MessageBox.Show("Sign-up Successful!");
+                    MessageBox.Show("Sign-up Successful!", "Success!");
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("This Username already exists");
+                    MessageBox.Show("This Username already exists", "Duplicate Username");
                 }
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Password is not the same with Confirm Password.");
+                MessageBox.Show("Password is not the same with Confirm Password.", "Sign Up Failed.");
             }
         }
 

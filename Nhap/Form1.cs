@@ -144,6 +144,7 @@ namespace Nhap
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = "MyCrotchet";
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.AllowUserToAddRows = false;
@@ -519,7 +520,6 @@ namespace Nhap
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            DataRow row;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 editedrowindex = dataGridView1.SelectedRows[0].Index;
@@ -727,6 +727,12 @@ namespace Nhap
                 dataGridView1.Columns["7"].Width = 48;
                 dataGridView1.Columns["8"].Width = 48;
             }
+        }
+
+        private void deleteAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Delete = new Delete(User);
+            Delete.Show();
         }
     }
 }

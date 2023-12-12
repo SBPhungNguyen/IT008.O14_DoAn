@@ -8,33 +8,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Nhap
 {
-    public partial class Select : Form
+    public partial class Delete : Form
     {
         //THAY DOI TEN SERVER O CONNECTIONINFO.CS TRUOC KHI CHAY:
         SqlConnection connection;
         string User;
         string sheetdetails;
         string SheetName;
-        public Select(string usermame)
+        public Delete(string username)
         {
             InitializeComponent();
             ConnectionInfo connectionInfo = new ConnectionInfo();
             connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
-            User = usermame;
+            User = username;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxSheetNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             SheetName = comboBoxSheetNames.Text;
         }
-       
+
         private void LoadSheetNames()
         {
-            comboBoxSheetNames.Items.Clear(); // Clear existing items
+            comboBoxSheetNames.Items.Clear();
 
             String loadSheetNamesQuery = "SELECT DISTINCT SheetName FROM [MusicLogin].[dbo].[AccountAccess] WHERE Username = @Username";
             SqlCommand loadSheetNamesCommand = new SqlCommand(loadSheetNamesQuery, connection);
@@ -68,42 +69,35 @@ namespace Nhap
             }
             else
             {
-                String sqlQuery = "SELECT SheetDetails FROM [MusicLogin].[dbo].[AccountAccess] WHERE Username = @Username AND SheetName = @SheetName";
-
-                SqlCommand command = new SqlCommand(sqlQuery, connection);
-
-                command.Parameters.AddWithValue("@Username", User);
-                command.Parameters.AddWithValue("@SheetName", SheetName);
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
+                DialogResult result = MessageBox.Show("Are you sure you want to delete the Song?",
+                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    reader.Read();
+                    try
+                    {
+                        String sqlQuery = "DELETE FROM [MusicLogin].[dbo].[AccountAccess] WHERE Username = @Username AND SheetName = @SheetName";
 
-                    if (reader["SheetDetails"] != DBNull.Value)
-                    {
-                        sheetdetails = reader["SheetDetails"].ToString();
-                        Form form = new Form1(User, SheetName, sheetdetails);
-                        foreach (Form form2 in Application.OpenForms)
-                        {
-                            form2.Hide();
-                        }
-                        form.Show();
+                        SqlCommand command = new SqlCommand(sqlQuery, connection);
+
+                        command.Parameters.AddWithValue("@Username", User);
+                        command.Parameters.AddWithValue("@SheetName", SheetName);
+
+                        SqlDataReader reader = command.ExecuteReader();
+                        reader.Read();
+                        reader.Close();
+                        MessageBox.Show("Song Deleted Successfully", "Success");
+                        LoadSheetNames();
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show("SheetDetails column is DBNull.", "Data Error");
+                        MessageBox.Show("Song Deletion Failed", "Failure");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No data found for the specified Username and SheetName.", "Data Not Found");
+                   
                 }
-
-                reader.Close();
             }
         }
-        
     }
 }
