@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guide.Designer.cs">
+      <DependentUpon>Guide.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guide.resx">
+      <DependentUpon>Guide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -179,6 +188,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_1_LogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_2_NameYourSong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_5_SaveNotNhac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_6_PlayYourSong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_7_SaveYourSong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_8_OtherOptions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guide_34_ChooseNotNhac.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

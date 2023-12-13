@@ -184,4 +184,25 @@
   <data name="Pause_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Guide_1_LogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_1_LogIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_2_NameYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_2_NameYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_34_ChooseNotNhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_34_ChooseNotNhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_5_SaveNotNhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_5_SaveNotNhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_6_PlayYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_6_PlayYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_7_SaveYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_7_SaveYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_8_OtherOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_8_OtherOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

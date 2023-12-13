@@ -218,6 +218,76 @@ namespace Nhap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Guide_1_LogIn {
+            get {
+                object obj = ResourceManager.GetObject("Guide_1_LogIn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_2_NameYourSong {
+            get {
+                object obj = ResourceManager.GetObject("Guide_2_NameYourSong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_34_ChooseNotNhac {
+            get {
+                object obj = ResourceManager.GetObject("Guide_34_ChooseNotNhac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_5_SaveNotNhac {
+            get {
+                object obj = ResourceManager.GetObject("Guide_5_SaveNotNhac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_6_PlayYourSong {
+            get {
+                object obj = ResourceManager.GetObject("Guide_6_PlayYourSong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_7_SaveYourSong {
+            get {
+                object obj = ResourceManager.GetObject("Guide_7_SaveYourSong", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Guide_8_OtherOptions {
+            get {
+                object obj = ResourceManager.GetObject("Guide_8_OtherOptions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pause_Button {
             get {
                 object obj = ResourceManager.GetObject("Pause_Button", resourceCulture);

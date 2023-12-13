@@ -734,5 +734,11 @@ namespace Nhap
             Form Delete = new Delete(User);
             Delete.Show();
         }
+
+        private void guideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Guide guide = new Guide();
+            guide.Show();
+        }
     }
 }
