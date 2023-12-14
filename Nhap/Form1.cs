@@ -316,7 +316,7 @@ namespace Nhap
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            /*switch (e.KeyCode)
             {
                 case Keys.Q: C4.Play(); break;
                 case Keys.W: D4.Play(); break;
@@ -333,7 +333,7 @@ namespace Nhap
                 case Keys.C: A5.Play(); break;
                 case Keys.V: B5.Play(); break;
                 case Keys.B: C6.Play(); break;
-            }
+            }*/
         }
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
