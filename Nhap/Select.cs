@@ -42,6 +42,7 @@ namespace Nhap
             SqlDataReader reader = loadSheetNamesCommand.ExecuteReader();
             try
             {
+
                 while (reader.Read())
                 {
                     comboBoxSheetNames.Items.Add(reader["SheetName"].ToString());

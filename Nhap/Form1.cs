@@ -708,6 +708,7 @@ namespace Nhap
             else
             {
                 richTextBox4.Text = "[Name Your Song]";
+                richTextBox3.Text = "";
                 NotNhac = new DataTable();
                 NotNhac.Columns.Add("1", typeof(string));
                 NotNhac.Columns.Add("2", typeof(string));
