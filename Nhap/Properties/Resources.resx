@@ -205,4 +205,7 @@
   <data name="Guide_8_OtherOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Guide_8_OtherOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MyCrotchetLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyCrotchetLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

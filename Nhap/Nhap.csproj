@@ -210,5 +210,8 @@
   <ItemGroup>
     <None Include="Resources\Guide_34_ChooseNotNhac.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyCrotchetLogo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
