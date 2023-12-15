@@ -536,7 +536,7 @@ namespace Nhap
             }
         }
         ////////////////////////////////////////////
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e) // File -> Save
         {
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -642,8 +642,10 @@ namespace Nhap
             openFileDialog.Title = "Open A Sheet";
             openFileDialog.ShowDialog();
             string filePath = openFileDialog.FileName;
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(filePath);
             if (File.Exists(filePath))
             {
+                richTextBox4.Text = fileNameWithoutExtension;
                 // Xoa nhung thu dang co trong dataGridView1
                 if (NotNhac.Rows.Count > 0)
                     NotNhac.Rows.Clear();
