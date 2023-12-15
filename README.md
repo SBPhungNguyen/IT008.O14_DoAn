@@ -15,6 +15,7 @@
 - Nguyễn Tấn Toàn - toannt@uit.edu.vn
 
 **Video Demo:**
+- https://youtu.be/H8thuMIOJtk
 
 **Description:**
 - Bắt đầu cuộc hành trình âm nhạc đầy thú vị của bạn cùng phần mềm MyCrotchet- một trò chơi hấp dẫn giúp biến thiết bị của bạn thành một cây piano ảo. Trò chơi này được thiết kế dành cho những người đam mê âm nhạc ở mọi lứa tuổi, mang đến sự kết hợp độc đáo giữa giải trí và giáo dục.
