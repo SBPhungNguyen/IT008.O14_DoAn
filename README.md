@@ -67,3 +67,19 @@ Sau khi cài đặt hoàn tất, đầu tiên, mở SSMS, Thực hiện các bư
 (Trong trường hợp này, tên server là F)
 Quay lại Source Code trong Microsoft Visual Studio đã mở: Mở ConnectionInfo.cs. Ở phần gạch chân, thay đổi F trong ‘Data Source = F’ thành tên Server đã đặt trong SSMS. Code có thể bắt đầu được sử dụng với Database
 ![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/bd766a75-fe24-410b-b4af-fba7de7be947)
+
+**Quy Tắc Ứng Xử:**
+Vì mục đích tạo ra một môi trường thân thiện chúng tôi mong đợi tất cả các người đóng góp và cộng đồng:
+1.	Tôn trọng và quan tâm đến người khác, hạn chế mọi hành vi quấy rối, phân biệt đối xử hoặc sử dụng ngôn ngữ xúc phạm.
+2.	Lắng nghe tích cực và mở lòng đối với sự phê bình xây dựng, thể hiện sự thông cảm đối với người khác và giữ lòng tin tích cực
+3.	KHÔNG được quấy rối, đe dọa công khai hoặc riêng tư; KHÔNG phân biệt đối xử hay thực hiện bất kỳ hành vi nào có mục đích xâm phạm. Đặc biệt, KHÔNG đăng thông tin cá nhân của người khác mà không có sự cho phép.
+4.	Những hành động vi phạm vào quy tắc ứng xử có thể bị yêu cầu dừng. Tùy thuộc vào mức độ nghiêm trọng hoặc số lần tái phạm, người vi phạm có thể bị loại bỏ khỏi dự án và không được cho phép tham gia các dự án khác của nhóm.
+5.	Nếu bạn phải chịu đựng hoặc phát hiện bất kỳ hành vi nào không được quy tắc ứng xử chấp nhận, xin liên hệ với Trưởng Nhóm để kịp thời có những biện pháp xử lý phù hợp.
+
+**Giấy Phép: Tổ chức theo MIT License:**
+Copyright 2023, Group_IT008.O14 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
