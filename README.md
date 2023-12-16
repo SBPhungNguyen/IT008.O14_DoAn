@@ -5,6 +5,8 @@
 
 **Logo:** 
 
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/679bad33-95ba-4ecf-967e-3a25b30fe611)
+
 
 **Contributors:**
 -	Leader: Nguyễn Đặng Kim Phụng – 22521148 - [GitHub](https://github.com/SBPhungNguyen)
@@ -42,4 +44,26 @@ Những bản nhạc quý báu mà người dùng đã tận tâm biên soạn s
 
 -	**Bước 4:** Sau khi ứng dụng hoàn thành tải xuống, hãy giải nén ứng dụng tại vị trí bạn mong muốn và chọn “Nhap.sln” để khởi chạy source code của chương trình
 
--	**Bước 5:**
+**Trước khi chạy Source Code của ứng dụng**, ta cần cài đặt Database vì ứng dụng này cần thiết sử dụng Database. Ứng dụng đã cung cấp Database xài sẵn trong thư mục Database -> MusicLogin.bacpac
+Để sử dụng Database, người dùng cần có sẵn và chuẩn bị kết nối SQL Server Management Studio (SSMS) kết hợp với bất kỳ cơ sở hạ tầng SQL nào (Nên là SQL Server).
+Sau khi cài đặt hoàn tất, đầu tiên, mở SSMS, Thực hiện các bước sau:
+
+-	**Bước 5:** Click chuột phải vào thư mục Database và bấm ‘Import Data-tier Application’.
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/3a7de3f1-43ff-40c6-8cff-f5b9fb2a20bc)
+
+-	**Bước 6:** Bấm Next ở mục Introduction. Ở mục Import Setting, chọn Import from Local Disk. Bấm Browse và chọn ‘MusicLogin.bacpac’ ở trong thư mục Database đã đề cập trên. Bấm Next khi hoàn thành chọn.
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/498944dd-b6cb-4416-a21e-6dad157e0491)
+
+-	**Bước 7:** Giữ nguyên mọi cài đặt trong Database Settings (Tên Database đã được đặt để đồng bộ với Source Code, nếu thay đổi sẽ khiến Source Code không chạy được). Bấm Next. Ở mục Summary, kiểm tra lại (Target->Name là tên Server trong SQL mà người dùng đã đặt.) Tiếp tục Bấm Next
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/14b449c0-bd14-47e0-8adc-c2363d66310e)
+
+-	**Bước 8:** Đợi một lúc để quá trình Import Database hoàn tất. Khi Import xong, đã có Database phù hợp với Code có thể sử dụng. Bấm Close.
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/3542dddf-dc76-455c-ac91-0522c6434afb)
+
+-	**Bước 9:** Ghi nhớ tên Server đã đặt trong SSMS
+  
+  ![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/41e872ae-c3d9-4158-bf3a-b7568b58a682)
+
+(Trong trường hợp này, tên server là F)
+Quay lại Source Code trong Microsoft Visual Studio đã mở: Mở ConnectionInfo.cs. Ở phần gạch chân, thay đổi F trong ‘Data Source = F’ thành tên Server đã đặt trong SSMS. Code có thể bắt đầu được sử dụng với Database
+![image](https://github.com/SBPhungNguyen/IT008.O14_DoAn/assets/145027338/bd766a75-fe24-410b-b4af-fba7de7be947)
