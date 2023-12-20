@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace Nhap
 {
     //THAY DOI SERVER CHO PHU HOP TRUOC KHI CHAY.
+    // user: test _ pass: 123
     internal class ConnectionInfo
     {
-        public static String connString = "Data Source=F;Initial Catalog=MusicLogin;Integrated Security=True";
+        public static String connString = "Data Source=LAPTOP-8KCG746L;Initial Catalog=MusicLogin;Integrated Security=True";
         public string ConnectionCommand() 
         { return @connString; }
     }

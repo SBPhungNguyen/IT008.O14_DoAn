@@ -30,6 +30,8 @@ namespace Nhap
             images[5] = Properties.Resources.Guide_7_SaveYourSong;
             images[6] = Properties.Resources.Guide_8_OtherOptions;
             pictureBox1.Image = images[current_image_index];
+            PreviousButton.Enabled = false;
+
         }
         private void PreviousButton_Click(object sender, EventArgs e)
         {
