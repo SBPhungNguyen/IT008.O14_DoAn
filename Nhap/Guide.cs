@@ -31,16 +31,20 @@ namespace Nhap
             images[6] = Properties.Resources.Guide_8_OtherOptions;
             pictureBox1.Image = images[current_image_index];
         }
-
         private void PreviousButton_Click(object sender, EventArgs e)
         {
             if (current_image_index > 0)
             {
                 current_image_index--;
                 pictureBox1.Image = images[current_image_index];
+                NextButton.IsAccessible = true;
+                NextButton.Enabled = true;
             }
-            else
+            if (current_image_index == 0)
+            {
                 PreviousButton.IsAccessible = false;
+                PreviousButton.Enabled = false;
+            }
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -49,9 +53,15 @@ namespace Nhap
             {
                 current_image_index++;
                 pictureBox1.Image = images[current_image_index];
+                PreviousButton.IsAccessible = true;
+                PreviousButton.Enabled = true;
             }
-            else
+            if (current_image_index == 6)
+            {
                 NextButton.IsAccessible = false;
+                NextButton.Enabled = false;
+            }
+
         }
     }
 }
