@@ -344,18 +344,26 @@ namespace Nhap
         private void button17_Click(object sender, EventArgs e) // not tron
         {
             not = 8;
+            button17.BackColor = Color.DimGray;
+            button18.BackColor = button19.BackColor = button20.BackColor = Color.Silver;
         }
         private void button18_Click(object sender, EventArgs e) // not trang
         {
             not = 4;
+            button18.BackColor = Color.DimGray;
+            button17.BackColor = button19.BackColor = button20.BackColor = Color.Silver;
         }
         private void button19_Click(object sender, EventArgs e) // not den
         {
             not = 2;
+            button19.BackColor = Color.DimGray;
+            button18.BackColor = button17.BackColor = button20.BackColor = Color.Silver;
         }
         private void button20_Click(object sender, EventArgs e) // not don
         {
             not = 1;
+            button20.BackColor = Color.DimGray;
+            button18.BackColor = button19.BackColor = button16.BackColor = Color.Silver;
         }
         
         private void button16_Click(object sender, EventArgs e) // play button
