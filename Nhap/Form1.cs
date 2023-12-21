@@ -429,9 +429,7 @@ namespace Nhap
                 if (check_StringInBox(richTextBox12) && check_StringInBox(richTextBox11) && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
                     flag = 1;
                 if (flag == 0)
-                {
                     MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
-                }
                 else
                 {
                     DataRow row = NotNhac.NewRow();
@@ -449,17 +447,25 @@ namespace Nhap
             }
             else //sua dong chinh xac
             {
-                DataRow row = NotNhac.Rows[editedrowindex];
-                row["1"] = richTextBox12.Text;
-                row["2"] = richTextBox11.Text;
-                row["3"] = richTextBox10.Text;
-                row["4"] = richTextBox9.Text;
-                row["5"] = richTextBox8.Text;
-                row["6"] = richTextBox7.Text;
-                row["7"] = richTextBox6.Text;
-                row["8"] = richTextBox5.Text;
-                richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
-                edit = 0;
+                int flag = 0;
+                if (check_StringInBox(richTextBox12) && check_StringInBox(richTextBox11) && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
+                    flag = 1;
+                if (flag == 0)
+                    MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+                else
+                {
+                    DataRow row = NotNhac.Rows[editedrowindex];
+                    row["1"] = richTextBox12.Text;
+                    row["2"] = richTextBox11.Text;
+                    row["3"] = richTextBox10.Text;
+                    row["4"] = richTextBox9.Text;
+                    row["5"] = richTextBox8.Text;
+                    row["6"] = richTextBox7.Text;
+                    row["7"] = richTextBox6.Text;
+                    row["8"] = richTextBox5.Text;
+                    richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+                    edit = 0;
+                }
             }
         }
 
