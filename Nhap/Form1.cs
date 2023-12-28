@@ -23,7 +23,7 @@ namespace Nhap
         string User;
         int is_playing = 0;
         int tempo;
-        int not = -1;
+        int not = 2;
         string[] notes = new string [10000];
         int lines = 0;
         int timer_playing = 0;
@@ -59,23 +59,15 @@ namespace Nhap
             {
                 User = username;
             }
+
+            // datagrid 2 cot
             NotNhac.Columns.Add("1", typeof(string));
             NotNhac.Columns.Add("2", typeof(string));
-            NotNhac.Columns.Add("3", typeof(string));
-            NotNhac.Columns.Add("4", typeof(string));
-            NotNhac.Columns.Add("5", typeof(string));
-            NotNhac.Columns.Add("6", typeof(string));
-            NotNhac.Columns.Add("7", typeof(string));
-            NotNhac.Columns.Add("8", typeof(string));
+
             dataGridView1.DataSource = NotNhac;
-            dataGridView1.Columns["1"].Width = 48;
-            dataGridView1.Columns["2"].Width = 48;
-            dataGridView1.Columns["3"].Width = 48;
-            dataGridView1.Columns["4"].Width = 48;
-            dataGridView1.Columns["5"].Width = 48;
-            dataGridView1.Columns["6"].Width = 48;
-            dataGridView1.Columns["7"].Width = 48;
-            dataGridView1.Columns["8"].Width = 48;
+            dataGridView1.Columns["1"].Width = 100;
+            dataGridView1.Columns["2"].Width = 100;
+
         }
 
         public Form1(string username, string sheetname, string sheetdetails)
@@ -90,23 +82,14 @@ namespace Nhap
             {
                 User = username;
             }
+            // datagrid 2 cot
             NotNhac.Columns.Add("1", typeof(string));
             NotNhac.Columns.Add("2", typeof(string));
-            NotNhac.Columns.Add("3", typeof(string));
-            NotNhac.Columns.Add("4", typeof(string));
-            NotNhac.Columns.Add("5", typeof(string));
-            NotNhac.Columns.Add("6", typeof(string));
-            NotNhac.Columns.Add("7", typeof(string));
-            NotNhac.Columns.Add("8", typeof(string));
+
             dataGridView1.DataSource = NotNhac;
-            dataGridView1.Columns["1"].Width = 48;
-            dataGridView1.Columns["2"].Width = 48;
-            dataGridView1.Columns["3"].Width = 48;
-            dataGridView1.Columns["4"].Width = 48;
-            dataGridView1.Columns["5"].Width = 48;
-            dataGridView1.Columns["6"].Width = 48;
-            dataGridView1.Columns["7"].Width = 48;
-            dataGridView1.Columns["8"].Width = 48;
+            dataGridView1.Columns["1"].Width = 100;
+            dataGridView1.Columns["2"].Width = 100;
+            //
             richTextBox4.Text = sheetname;
             string inputString = sheetdetails;
 
@@ -124,8 +107,8 @@ namespace Nhap
                         int length_of_line = line.Length;
                         for (int i = 1; i < length_of_line; i++)
                             row[i] = line[i].ToString();
-                        for (int i = length_of_line; i < 8; i++)
-                            row[i] = "";
+                        /*for (int i = length_of_line; i < 8; i++)
+                            row[i] = "";*/
                         NotNhac.Rows.Add(row);
                     }
                     else // cac not binh thuong
@@ -134,8 +117,8 @@ namespace Nhap
                         int length_of_line = line.Length;
                         for (int i = 2; i < length_of_line; i++)
                             row[i - 1] = line[i].ToString();
-                        for (int i = length_of_line; i < 8; i++)
-                            row[i] = "";
+                        /*for (int i = length_of_line; i < 8; i++)
+                            row[i] = "";*/
                         NotNhac.Rows.Add(row);
                     }
                 }
@@ -149,13 +132,13 @@ namespace Nhap
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.AllowUserToAddRows = false;
             richTextBox12.KeyDown += RichTextBox12_KeyDown;
-            richTextBox11.KeyDown += RichTextBox12_KeyDown;
-            richTextBox10.KeyDown += RichTextBox12_KeyDown;
+            richTextBox11.KeyDown += RichTextBox11_KeyDown;
+            /*richTextBox10.KeyDown += RichTextBox12_KeyDown;
             richTextBox9.KeyDown += RichTextBox12_KeyDown;
             richTextBox8.KeyDown += RichTextBox12_KeyDown;
             richTextBox7.KeyDown += RichTextBox12_KeyDown;
             richTextBox6.KeyDown += RichTextBox12_KeyDown;
-            richTextBox5.KeyDown += RichTextBox12_KeyDown;
+            richTextBox5.KeyDown += RichTextBox12_KeyDown;*/
             richTextBox3.KeyDown += RichTextBox3_KeyDown;
         }
 
@@ -166,10 +149,17 @@ namespace Nhap
                 e.SuppressKeyPress = true;
             }
         }
+        private void RichTextBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Back && e.KeyCode!=Keys.D8 && e.KeyCode != Keys.D7 && e.KeyCode != Keys.D6 && e.KeyCode != Keys.D5 && e.KeyCode != Keys.D4 && e.KeyCode!=Keys.D3 && e.KeyCode != Keys.D2 && e.KeyCode != Keys.D1)
+            {
+                e.SuppressKeyPress = true;
+            }
+        }
 
         private void RichTextBox12_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode!=Keys.Back && e.KeyCode!=Keys.A && e.KeyCode!=Keys.B && e.KeyCode!=Keys.C && e.KeyCode!=Keys.D && e.KeyCode!=Keys.E && e.KeyCode != Keys.F && e.KeyCode != Keys.G && e.KeyCode != Keys.A && e.KeyCode != Keys.B && e.KeyCode != Keys.OemPeriod && e.KeyCode != Keys.D4 && e.KeyCode != Keys.D5 && e.KeyCode != Keys.D6)
+            if (e.KeyCode!=Keys.Back && e.KeyCode != Keys.Left && e.KeyCode != Keys.Right && e.KeyCode!=Keys.A && e.KeyCode!=Keys.B && e.KeyCode!=Keys.C && e.KeyCode!=Keys.D && e.KeyCode!=Keys.E && e.KeyCode != Keys.F && e.KeyCode != Keys.G && e.KeyCode != Keys.A && e.KeyCode != Keys.B && e.KeyCode != Keys.OemPeriod && e.KeyCode != Keys.D4 && e.KeyCode != Keys.D5 && e.KeyCode != Keys.D6)
             {
                 e.SuppressKeyPress = true;
             }
@@ -177,12 +167,12 @@ namespace Nhap
 
         private void clear_all_textbox()
         {
-            richTextBox5.Clear();
+            /*richTextBox5.Clear();
             richTextBox6.Clear();
             richTextBox7.Clear();
             richTextBox8.Clear();
             richTextBox9.Clear();
-            richTextBox10.Clear();
+            richTextBox10.Clear();*/
             richTextBox11.Clear();
         }
         private void display_on_textbox(string notnhac)
@@ -190,33 +180,33 @@ namespace Nhap
             clear_all_textbox();
             richTextBox12.Text = notnhac;
             if (not == 2)
-                richTextBox11.Text = ".";
+                richTextBox11.Text = "2";
             else if (not == 4)
             {
-                richTextBox11.Text = ".";
-                richTextBox10.Text = ".";
-                richTextBox9.Text = ".";
+                richTextBox11.Text = "4";
+               /* richTextBox10.Text = ".";
+                richTextBox9.Text = ".";*/
             }
             else if (not == 8)
             {
-                richTextBox11.Text = ".";
-                richTextBox10.Text = ".";
+                richTextBox11.Text = "8";
+                /*richTextBox10.Text = ".";
                 richTextBox9.Text = ".";
                 richTextBox8.Text = ".";
                 richTextBox7.Text = ".";
                 richTextBox6.Text = ".";
-                richTextBox5.Text = ".";
+                richTextBox5.Text = ".";*/
             }
-            else if (not == 0)
+            else if (not == 1)
             {
-                richTextBox12.Text = ".";
-                richTextBox11.Text = ".";
-                richTextBox10.Text = ".";
+                //richTextBox12.Text = ".";
+                richTextBox11.Text = "1";
+                /*richTextBox10.Text = ".";
                 richTextBox9.Text = ".";
                 richTextBox8.Text = ".";
                 richTextBox7.Text = ".";
                 richTextBox6.Text = ".";
-                richTextBox5.Text = ".";
+                richTextBox5.Text = ".";*/
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -363,7 +353,7 @@ namespace Nhap
         {
             not = 1;
             button20.BackColor = Color.DimGray;
-            button18.BackColor = button19.BackColor = button16.BackColor = Color.Silver;
+            button18.BackColor = button19.BackColor = button17.BackColor = Color.Silver;
         }
         
         private void button16_Click(object sender, EventArgs e) // play button
@@ -385,13 +375,23 @@ namespace Nhap
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    for (int j=0; j<row.Cells.Count;j++)
+                    notes[lines] = ""+row.Cells[0].Value;
+                    lines++;
+                    /*for (int j=1; j<row.Cells.Count;j++)
                     {
+                        /*
                         if (row.Cells[j].Value!="")
                         {
                             notes[lines] = "" + row.Cells[j].Value;
                             lines++;
                         }
+
+                    }*/
+                    string a= ""+row.Cells[1].Value;
+                    for (int i=0;i< int.Parse(a);i++)
+                    {
+                        notes[lines] = ".";
+                        lines++;
                     }
 
                 }
@@ -415,10 +415,21 @@ namespace Nhap
         }
         private bool check_StringInBox(RichTextBox a)
         {
+            if (a.Text == "")
+                return false;
             if (a.Text == "C4" ||a.Text == "D4" ||a.Text == "E4" || a.Text == "F4" ||a.Text == "G4" || a.Text == "A4" || a.Text == "B4" ||a.Text=="C5"|| a.Text == "D5" || a.Text == "E5" || a.Text == "F5" || a.Text == "G5" || a.Text == "A5" || a.Text == "B5" || a.Text == "C6" || a.Text == "."||a.Text=="")
                 return true;
             else if (a.Text == "c4" || a.Text == "d4" || a.Text == "e4" || a.Text == "f4" || a.Text == "g4" || a.Text == "a4" || a.Text == "b4" || a.Text == "c5" || a.Text == "d5" || a.Text == "e5" || a.Text == "f5" || a.Text == "g5" || a.Text == "a5" || a.Text == "b5" || a.Text == "c6" || a.Text == "." || a.Text == "")
                    return true;
+
+            return false;
+        }
+        private bool check_StringInBox2(RichTextBox a)
+        {
+            if (a.Text =="")
+                return false;
+            if (int.Parse(a.Text) >= 1 && int.Parse(a.Text) <= 8)
+                return true;
             return false;
         }
         private void button21_Click(object sender, EventArgs e) // save button
@@ -426,7 +437,7 @@ namespace Nhap
             if (edit == 0) //them moi binh thuong
             {
                 int flag = 0;
-                if (check_StringInBox(richTextBox12) && check_StringInBox(richTextBox11) && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
+                if (check_StringInBox(richTextBox12) && check_StringInBox2(richTextBox11) /*&& check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5)*/)
                     flag = 1;
                 if (flag == 0)
                     MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
@@ -434,21 +445,22 @@ namespace Nhap
                 {
                     DataRow row = NotNhac.NewRow();
                     row["1"] = richTextBox12.Text;
-                    row["2"] = richTextBox11.Text;
+                    /*row["2"] = richTextBox11.Text;
                     row["3"] = richTextBox10.Text;
                     row["4"] = richTextBox9.Text;
                     row["5"] = richTextBox8.Text;
                     row["6"] = richTextBox7.Text;
                     row["7"] = richTextBox6.Text;
-                    row["8"] = richTextBox5.Text;
+                    row["8"] = richTextBox5.Text;*/
+                    row["2"] = richTextBox11.Text;
                     NotNhac.Rows.Add(row);
-                    richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+                    richTextBox12.Text = richTextBox11.Text = /*richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text =*/ "";
                 }
             }
             else //sua dong chinh xac
             {
                 int flag = 0;
-                if (check_StringInBox(richTextBox12) && check_StringInBox(richTextBox11) && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5))
+                if (check_StringInBox(richTextBox12) && check_StringInBox2(richTextBox11)/* && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5)*/)
                     flag = 1;
                 if (flag == 0)
                     MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
@@ -456,14 +468,15 @@ namespace Nhap
                 {
                     DataRow row = NotNhac.Rows[editedrowindex];
                     row["1"] = richTextBox12.Text;
-                    row["2"] = richTextBox11.Text;
+                    /*row["2"] = richTextBox11.Text;
                     row["3"] = richTextBox10.Text;
                     row["4"] = richTextBox9.Text;
                     row["5"] = richTextBox8.Text;
                     row["6"] = richTextBox7.Text;
                     row["7"] = richTextBox6.Text;
-                    row["8"] = richTextBox5.Text;
-                    richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+                    row["8"] = richTextBox5.Text;*/
+                    row["2"] = richTextBox11.Text;
+                    richTextBox12.Text = richTextBox11.Text/* = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text */= "";
                     edit = 0;
                 }
             }
@@ -541,12 +554,12 @@ namespace Nhap
                 edit = 1;
                 richTextBox12.Text = editedRow["1"].ToString();
                 richTextBox11.Text = editedRow["2"].ToString();
-                richTextBox10.Text = editedRow["3"].ToString();
+               /*/ richTextBox10.Text = editedRow["3"].ToString();
                 richTextBox9.Text = editedRow["4"].ToString();
                 richTextBox5.Text = editedRow["5"].ToString();
                 richTextBox6.Text = editedRow["6"].ToString();
                 richTextBox7.Text = editedRow["7"].ToString();
-                richTextBox8.Text = editedRow["8"].ToString();
+                richTextBox8.Text = editedRow["8"].ToString();*/
             }
         }
         ////////////////////////////////////////////
@@ -556,7 +569,7 @@ namespace Nhap
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < 2; i++)
                 {
                     stringBuilder.Append(row.Cells[i].Value.ToString());
                     stringBuilder.Append("");
@@ -635,7 +648,7 @@ namespace Nhap
                 {
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        for (int i = 0; i < 8; i++)
+                        for (int i = 0; i < 2; i++)
                             writer.Write(row.Cells[i].Value.ToString());
                         writer.Write("\n");
                     }
@@ -676,8 +689,6 @@ namespace Nhap
                             int length_of_line = line.Length;
                             for (int i = 1; i < length_of_line; i++)
                                 row[i] = line[i].ToString();
-                            for (int i = length_of_line; i < 8; i++)
-                                row[i] = "";
                             NotNhac.Rows.Add(row);
                         }
                         else // cac not binh thuong
@@ -686,8 +697,6 @@ namespace Nhap
                             int length_of_line = line.Length;
                             for (int i = 2; i < length_of_line; i++)
                                 row[i - 1] = line[i].ToString();
-                            for (int i = length_of_line; i < 8; i++)
-                                row[i] = "";
                             NotNhac.Rows.Add(row);
                         }
                     }
@@ -698,7 +707,7 @@ namespace Nhap
         {
             editedrowindex = -1;
             edit = 0;
-            richTextBox12.Text = richTextBox11.Text = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text = "";
+            richTextBox12.Text = richTextBox11.Text =/* richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text =*/ "";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -726,23 +735,13 @@ namespace Nhap
                 richTextBox4.Text = "[Name Your Song]";
                 richTextBox3.Text = "";
                 NotNhac = new DataTable();
+                richTextBox11.Text = richTextBox12.Text = "";
+                // sua ui datagrid 
                 NotNhac.Columns.Add("1", typeof(string));
                 NotNhac.Columns.Add("2", typeof(string));
-                NotNhac.Columns.Add("3", typeof(string));
-                NotNhac.Columns.Add("4", typeof(string));
-                NotNhac.Columns.Add("5", typeof(string));
-                NotNhac.Columns.Add("6", typeof(string));
-                NotNhac.Columns.Add("7", typeof(string));
-                NotNhac.Columns.Add("8", typeof(string));
                 dataGridView1.DataSource = NotNhac;
-                dataGridView1.Columns["1"].Width = 48;
-                dataGridView1.Columns["2"].Width = 48;
-                dataGridView1.Columns["3"].Width = 48;
-                dataGridView1.Columns["4"].Width = 48;
-                dataGridView1.Columns["5"].Width = 48;
-                dataGridView1.Columns["6"].Width = 48;
-                dataGridView1.Columns["7"].Width = 48;
-                dataGridView1.Columns["8"].Width = 48;
+                dataGridView1.Columns["1"].Width = 100;
+                dataGridView1.Columns["2"].Width = 100;
             }
         }
 
@@ -759,3 +758,21 @@ namespace Nhap
         }
     }
 }
+
+/*NotNhac.Columns.Add("1", typeof(string));
+NotNhac.Columns.Add("2", typeof(string));
+NotNhac.Columns.Add("3", typeof(string));
+NotNhac.Columns.Add("4", typeof(string));
+NotNhac.Columns.Add("5", typeof(string));
+NotNhac.Columns.Add("6", typeof(string));
+NotNhac.Columns.Add("7", typeof(string));
+NotNhac.Columns.Add("8", typeof(string));
+dataGridView1.DataSource = NotNhac;
+dataGridView1.Columns["1"].Width = 48;
+dataGridView1.Columns["2"].Width = 48;
+dataGridView1.Columns["3"].Width = 48;
+dataGridView1.Columns["4"].Width = 48;
+dataGridView1.Columns["5"].Width = 48;
+dataGridView1.Columns["6"].Width = 48;
+dataGridView1.Columns["7"].Width = 48;
+dataGridView1.Columns["8"].Width = 48;*/
