@@ -160,7 +160,7 @@ namespace Nhap
 
         private void InsertSongIntoPublicSong(string username, string sheetName, string sheetDetails)
         {
-            using (SqlCommand insertPublicSongCommand = new SqlCommand("INSERT INTO [MusicLogin].[dbo].[PublicSong] (Username, SheetName, SheetDetails, Likes) VALUES (@Username, @SheetName, @SheetDetails, 0)", connection))
+            using (SqlCommand insertPublicSongCommand = new SqlCommand("INSERT INTO [MusicLogin].[dbo].[PublicSong] (Username, SheetName, SheetDetails, Likes, LikesHistory) VALUES (@Username, @SheetName, @SheetDetails, 0, ' ')", connection))
             {
                 insertPublicSongCommand.Parameters.AddWithValue("@Username", username);
                 insertPublicSongCommand.Parameters.AddWithValue("@SheetName", sheetName);

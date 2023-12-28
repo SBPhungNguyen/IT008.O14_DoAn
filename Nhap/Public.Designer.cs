@@ -41,6 +41,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16F);
-            this.button1.Location = new System.Drawing.Point(40, 368);
+            this.button1.Location = new System.Drawing.Point(342, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(283, 34);
             this.button1.TabIndex = 16;
@@ -72,7 +73,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16F);
-            this.button2.Location = new System.Drawing.Point(40, 408);
+            this.button2.Location = new System.Drawing.Point(342, 408);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(283, 34);
             this.button2.TabIndex = 17;
@@ -107,7 +108,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(36, 287);
+            this.label4.Location = new System.Drawing.Point(338, 287);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 22);
             this.label4.TabIndex = 21;
@@ -118,7 +119,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(108, 331);
+            this.label5.Location = new System.Drawing.Point(410, 331);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 22);
             this.label5.TabIndex = 22;
@@ -129,7 +130,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(36, 331);
+            this.label6.Location = new System.Drawing.Point(338, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 22);
             this.label6.TabIndex = 23;
@@ -140,12 +141,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(36, 309);
+            this.label7.Location = new System.Drawing.Point(338, 309);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 22);
             this.label7.TabIndex = 24;
             this.label7.Text = "   ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // button3
             // 
@@ -161,9 +161,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(329, 263);
+            this.richTextBox1.Location = new System.Drawing.Point(40, 263);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(297, 179);
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(292, 179);
             this.richTextBox1.TabIndex = 26;
             this.richTextBox1.Text = "";
             // 
@@ -172,11 +173,23 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(36, 263);
+            this.label3.Location = new System.Drawing.Point(338, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 22);
             this.label3.TabIndex = 27;
             this.label3.Text = "Selected Song:";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button4.Font = new System.Drawing.Font("Monotype Corsiva", 16F);
+            this.button4.Location = new System.Drawing.Point(550, 257);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(76, 34);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Like";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Public
             // 
@@ -184,6 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(668, 473);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
@@ -223,5 +237,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }

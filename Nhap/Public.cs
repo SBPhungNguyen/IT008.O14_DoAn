@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,8 +23,8 @@ namespace Nhap
         string sheetdetails;
         string SheetName;
         string creator;
-        DataTable dataTable; 
-
+        DataTable dataTable;
+        string LikesHistory = "";
         public Public(string username)
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace Nhap
             dataGridView1.Columns["Likes"].Width = 43;
             if (dataGridView1.Rows.Count > 0)
             {
-                int rowIndex = 0; 
+                int rowIndex = 0;
                 creator = dataGridView1.Rows[rowIndex].Cells["Creator"].Value.ToString();
             }
         }
@@ -65,6 +66,25 @@ namespace Nhap
                 creator = dataGridView1.Rows[e.RowIndex].Cells["Creator"].Value.ToString();
                 label7.Text = SheetName;
                 label5.Text = creator;
+                string queryString = "SELECT LikesHistory FROM PublicSong WHERE Username = @Username AND SheetName = @SheetName";
+                // Create a new SqlDataAdapter with the query and connection
+                SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+                // Define parameters and add them to the adapter's SelectCommand.Parameters collection
+                adapter.SelectCommand.Parameters.Add(new SqlParameter("@Username", SqlDbType.VarChar, 20)).Value = creator;
+                adapter.SelectCommand.Parameters.Add(new SqlParameter("@SheetName", SqlDbType.VarChar, 100)).Value = SheetName;
+                DataTable dataTableLike = new DataTable();
+                adapter.Fill(dataTableLike);
+                if (dataTableLike.Rows.Count > 0)
+                {
+                    string likesHistory = dataTableLike.Rows[0][0].ToString();
+                    richTextBox1.Text = likesHistory;
+                    LikesHistory = richTextBox1.Text;
+                }
+                else
+                {
+                    // No rows found, handle accordingly
+                    richTextBox1.Text = "No data found";
+                }
             }
         }
 
@@ -77,12 +97,19 @@ namespace Nhap
 
         private void button1_Click(object sender, EventArgs e) //Open Public Song
         {
-            Form form = new Form1(User, SheetName, sheetdetails);
-            foreach (Form form2 in Application.OpenForms)
+            if (User == null || SheetName == null || sheetdetails == null)
             {
-                form2.Hide();
+                MessageBox.Show("Please Select a Song first.", "Opening Song Failed!");
             }
-            form.Show();
+            else
+            {
+                Form form = new Form1(User, SheetName, sheetdetails);
+                foreach (Form form2 in Application.OpenForms)
+                {
+                    form2.Hide();
+                }
+                form.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,9 +126,44 @@ namespace Nhap
             settings.Show();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) //Like Song
         {
+            if (User == null || SheetName == null || sheetdetails == null)
+            {
+                MessageBox.Show("Please Select a Song first.", "Liking Song Failed!");
+            }
+            else
+            {
+                if (richTextBox1.Text != "")
+                    LikesHistory = LikesHistory + '\n';
+                LikesHistory = LikesHistory + User + " liked this!";
+                using (SqlCommand LikesUpdate = new SqlCommand("UPDATE [MusicLogin].[dbo].[PublicSong] SET Likes = Likes + 1, LikesHistory = @NewLikesHistory WHERE Username = @Username AND SheetName = @SheetName;", connection))
+                {
+                    LikesUpdate.Parameters.AddWithValue("@Username", creator);
+                    LikesUpdate.Parameters.AddWithValue("@SheetName", SheetName);
+                    LikesUpdate.Parameters.AddWithValue("@NewLikesHistory", LikesHistory);
 
+                    try
+                    {
+                        int rowsAffected = LikesUpdate.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            LoadData();
+                            richTextBox1.Text = LikesHistory;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Like Failed.", "Like Failed");
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Error liking public song: " + ex.Message, "Upload Failed");
+                    }
+                }
+
+            }
         }
     }
 }
