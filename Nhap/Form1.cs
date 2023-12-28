@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Nhap
@@ -140,6 +141,18 @@ namespace Nhap
             richTextBox6.KeyDown += RichTextBox12_KeyDown;
             richTextBox5.KeyDown += RichTextBox12_KeyDown;*/
             richTextBox3.KeyDown += RichTextBox3_KeyDown;
+
+            //avoid sorting for datagridview
+            dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox3.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox12.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox11.SelectionAlignment = HorizontalAlignment.Center;
+
+
+
         }
 
         private void RichTextBox3_KeyDown(object sender, KeyEventArgs e)
@@ -767,6 +780,7 @@ namespace Nhap
         {
             Public Public = new Public(User); Public.Show();
         }
+
     }
 }
 
