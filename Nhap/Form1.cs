@@ -712,13 +712,19 @@ namespace Nhap
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
+            foreach (Form childForm in Application.OpenForms)
+            {
+                if (childForm != this)
+                {
+                    childForm.Close();
+                }
+            }
             this.Close();
-            Environment.Exit(0);
         }
 
         private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form Select = new Select(User);
+            Form Select = new Select(User, 0);
             Select.Show();
         }
 
@@ -755,6 +761,11 @@ namespace Nhap
         {
             Guide guide = new Guide();
             guide.Show();
+        }
+
+        private void publicSongsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Public Public = new Public(User); Public.Show();
         }
     }
 }

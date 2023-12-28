@@ -77,6 +77,7 @@
             this.Controls.Add(this.comboBoxSheetNames);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Select";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select";
             this.ResumeLayout(false);
             this.PerformLayout();

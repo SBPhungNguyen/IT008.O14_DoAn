@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public.Designer.cs">
+      <DependentUpon>Public.cs</DependentUpon>
+    </Compile>
     <Compile Include="Select.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPublicSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPublicSettings.Designer.cs">
+      <DependentUpon>UserPublicSettings.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>
@@ -107,11 +119,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Public.resx">
+      <DependentUpon>Public.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Select.resx">
       <DependentUpon>Select.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPublicSettings.resx">
+      <DependentUpon>UserPublicSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
