@@ -21,7 +21,6 @@ namespace Nhap
         string username = "";
         string password = "";
         string password2 = "";
-
         public Signup()
         {
             InitializeComponent();

@@ -776,14 +776,14 @@ namespace Nhap
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            foreach (Form childForm in Application.OpenForms)
+            /*foreach (Form childForm in Application.OpenForms)
             {
                 if (childForm != this)
                 {
                     childForm.Close();
                 }
             }
-            this.Close();
+            this.Close();*/
             Environment.Exit(0);
 
         }

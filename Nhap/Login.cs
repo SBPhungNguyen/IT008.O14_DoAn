@@ -96,5 +96,10 @@ namespace Nhap
                 textBox1.Text = textBox1.Text.Substring(0, 20);
             }
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

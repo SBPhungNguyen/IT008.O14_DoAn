@@ -152,12 +152,17 @@ namespace Nhap
             }
             else
             {
-                Form form = new Form1(User, SheetName, sheetdetails);
-                foreach (Form form2 in Application.OpenForms)
+                DialogResult result = MessageBox.Show("Opening a Public Song will clear your current Music Sheet. Proceed?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
                 {
-                    form2.Hide();
+                    Form form = new Form1(User, SheetName, sheetdetails);
+                    foreach (Form form2 in Application.OpenForms)
+                    {
+                        form2.Hide();
+                    }
+                    form.Show();
                 }
-                form.Show();
             }
         }
 
