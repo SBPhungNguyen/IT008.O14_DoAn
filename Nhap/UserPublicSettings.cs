@@ -36,7 +36,7 @@ namespace Nhap
             SqlParameter usernameParameter = new SqlParameter("@username", SqlDbType.VarChar);
             usernameParameter.Value = User; 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT SheetName as [Song Name], SheetDetails as [Sheet Details], Likes FROM PublicSong Where Username = @username", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT SheetName as [Song Name], Likes, SheetDetails as [Sheet Details] FROM PublicSong Where Username = @username", connection);
             adapter.SelectCommand.Parameters.Add(usernameParameter); 
 
             dataTable = new DataTable();
@@ -44,9 +44,12 @@ namespace Nhap
 
             // Set the DataTable as the DataSource for the DataGridView
             dataGridView1.DataSource = dataTable;
-            dataGridView1.Columns["Song Name"].Width = 200;
-            dataGridView1.Columns["Sheet Details"].Width = 225;
-            dataGridView1.Columns["Likes"].Width = 42;
+            dataGridView1.Columns["Song Name"].Width = 400;
+            dataGridView1.Columns["Sheet Details"].Width = 0;
+            dataGridView1.Columns["Likes"].Width = 67;
+            dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
             if (dataGridView1.Rows.Count > 0)
             {
 
@@ -72,32 +75,36 @@ namespace Nhap
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (rowIndex == -1)
+            if (dataGridView1.CurrentCell != null)
             {
-                MessageBox.Show("Please Select a song first before you Delete Them.", "Song Deletion Failed");
+                int selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedRowIndex];
+
+                string songName = selectedRow.Cells["Song Name"].Value.ToString();
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to Delete the Song?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlCommand deleteCommand = new SqlCommand("DELETE FROM PublicSong WHERE Username = @username AND SheetName = @sheetName", connection))
+                    {
+                        deleteCommand.Parameters.AddWithValue("@username", User);
+                        deleteCommand.Parameters.AddWithValue("@sheetName", songName);
+                        deleteCommand.ExecuteNonQuery();
+                    }
+
+                    dataGridView1.Rows.Remove(selectedRow);
+                    rowIndex = -1;
+                    label5.Text = " ";
+                }
             }
             else
             {
-                DialogResult result = MessageBox.Show($"Are you sure you want to Delete the Song?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    if (dataGridView1.SelectedRows.Count > 0)
-                    {
-                        DataGridViewRow selectedRow = dataGridView1.Rows[rowIndex];
-                        string songName = selectedRow.Cells["Song Name"].Value.ToString();
-                        using (SqlCommand deleteCommand = new SqlCommand("DELETE FROM PublicSong WHERE Username = @username AND SheetName = @sheetName", connection))
-                        {
-                            deleteCommand.Parameters.AddWithValue("@username", User);
-                            deleteCommand.Parameters.AddWithValue("@sheetName", songName);
-                            deleteCommand.ExecuteNonQuery();
-                        }
-                        dataGridView1.Rows.Remove(selectedRow);
-                        rowIndex = -1;
-                        label5.Text = " ";
-                    }
-                }
+                MessageBox.Show("Please Select a song first before you Delete Them.", "Song Deletion Failed");
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

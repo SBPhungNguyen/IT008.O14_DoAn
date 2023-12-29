@@ -47,10 +47,10 @@ namespace Nhap
             dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
-            dataGridView1.Columns["Creator"].Width = 75;
-            dataGridView1.Columns["Song Name"].Width = 435;
+            dataGridView1.Columns["Creator"].Width = 110;
+            dataGridView1.Columns["Song Name"].Width = 383;
             dataGridView1.Columns["Sheet Details"].Width = 0;
-            dataGridView1.Columns["Likes"].Width = 53;
+            dataGridView1.Columns["Likes"].Width = 70;
 
             dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;

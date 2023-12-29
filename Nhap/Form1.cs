@@ -340,8 +340,33 @@ namespace Nhap
         }
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
+            if (0 <= richTextBox4.Text.Length && richTextBox4.Text.Length <= 20)
+            {
+                SetFontForEntireText(new Font("Calibri", 22));
+            }
+            else if (21 <= richTextBox4.Text.Length && richTextBox4.Text.Length <= 35)
+            {
+                SetFontForEntireText(new Font("Calibri", 18));
+            }
+            else
+            {
+                SetFontForEntireText(new Font("Calibri", 14));
+            }
+
+            if (richTextBox4.Text.Length > 50)
+            {
+                richTextBox4.Text = richTextBox4.Text.Substring(0, 50);
+                richTextBox4.SelectionStart = richTextBox4.Text.Length;
+            }
+
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
         }
+
+        private void SetFontForEntireText(Font font)
+        {
+            richTextBox4.Font = font;
+        }
+
 
 
         private void button17_Click(object sender, EventArgs e) // not tron
