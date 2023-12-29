@@ -31,6 +31,7 @@ namespace Nhap
         int editedrowindex = -1;
         int edit = 0;
         bool KeyboardEnabled = false;
+        bool KeyBoardEnabledWhilePlaying = false;
         DataTable NotNhac = new DataTable();
         System.Media.SoundPlayer C4 = new System.Media.SoundPlayer(Properties.Resources.a84);   //  DO_4
         System.Media.SoundPlayer D4 = new System.Media.SoundPlayer(Properties.Resources.a89);   //  RE_4
@@ -144,7 +145,7 @@ namespace Nhap
             richTextBox6.KeyDown += RichTextBox12_KeyDown;
             richTextBox5.KeyDown += RichTextBox12_KeyDown;*/
             richTextBox3.KeyDown += RichTextBox3_KeyDown;
-
+            richTextBox3.Text = "";
             //avoid sorting for datagridview
             dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -410,6 +411,14 @@ namespace Nhap
         private void button16_Click(object sender, EventArgs e) // play button
         {
             is_playing++;
+            if (int.TryParse(richTextBox3.Text, out int value))
+            {
+                if (value < 40)
+                    richTextBox3.Text = "40";
+                else if (value > 200)
+                    richTextBox3.Text = "200";
+            }
+            KeyBoardEnabledWhilePlaying = KeyboardEnabled;
             if (is_playing%2==1) // is playing
             {
                 dataGridView1.AllowUserToDeleteRows = false;
@@ -491,7 +500,7 @@ namespace Nhap
                 if (check_StringInBox(richTextBox12) && check_StringInBox2(richTextBox11) /*&& check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5)*/)
                     flag = 1;
                 if (flag == 0)
-                    MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+                    MessageBox.Show("You cannot add a blank note to the Music Sheet!", "Adding Note Failed");
                 else
                 {
                     DataRow row = NotNhac.NewRow();
@@ -549,7 +558,13 @@ namespace Nhap
         {
             if (is_playing%2==1&&timer_playing < lines)
             {
-                switch(notes[timer_playing])
+                if (KeyBoardEnabledWhilePlaying == true)
+                {
+                    KeyboardEnabled = false;
+                    button22.BackColor = Color.Black;
+                    button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo2;
+                }
+                switch (notes[timer_playing])
                 {
                     case "C4": C4.Play(); break;
                     case "D4": D4.Play(); break;
@@ -593,6 +608,12 @@ namespace Nhap
                 button21.Enabled = true;
                 //button22.Enabled = true;
                 button16.BackgroundImage = Properties.Resources.Play_Button;
+                if (KeyBoardEnabledWhilePlaying == true)
+                {
+                    KeyboardEnabled = true;
+                    button22.BackColor = Color.Black;
+                    button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo1;
+                }
                 for (int j = 0; j <= lines; j++)
                     notes[lines] = "";
                 lines = 0;
@@ -692,6 +713,16 @@ namespace Nhap
         ////////////////////////////////////////////
         private void exportToolStripMenuItem_Click(object sender, EventArgs e) // File -> Export
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             saveFileDialog1.Title = "Save Your Sheet";
@@ -722,6 +753,16 @@ namespace Nhap
         }
         private void fromFileToolStripMenuItem_Click(object sender, EventArgs e) // File -> Open from File
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog.InitialDirectory = @"C:\My Documents";
@@ -790,12 +831,32 @@ namespace Nhap
 
         private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             Form Select = new Select(User, 0);
             Select.ShowDialog();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             DialogResult result = MessageBox.Show("Are you sure you want to create a new blank Music Sheet and clear current Music Sheet??", "Confirmation", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.No)
@@ -821,6 +882,16 @@ namespace Nhap
 
         private void deleteAToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             Form Delete = new Delete(User);
             Delete.ShowDialog();
 
@@ -836,6 +907,16 @@ namespace Nhap
 
         private void publicSongsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
             Public Public = new Public(User); 
             Public.ShowDialog();
         }
@@ -869,8 +950,14 @@ namespace Nhap
                 }
 
             }
+            timer1.Stop();
             Login login = new Login(this);
             login.Show();
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
