@@ -66,6 +66,7 @@ namespace Nhap
                 sheetdetails = dataGridView1.Rows[e.RowIndex].Cells["Sheet Details"].Value.ToString();
                 rowIndex = e.RowIndex;
                 label5.Text = SheetName;
+                rowIndex = e.RowIndex;
             }
         }
 

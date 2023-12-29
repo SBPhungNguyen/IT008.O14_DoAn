@@ -488,13 +488,13 @@
             // 
             this.button21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.Location = new System.Drawing.Point(461, 295);
             this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(100, 48);
             this.button21.TabIndex = 8;
-            this.button21.Text = "Save";
+            this.button21.Text = "Add";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
@@ -548,12 +548,13 @@
             // richTextBox11
             // 
             this.richTextBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox11.Location = new System.Drawing.Point(311, 295);
             this.richTextBox11.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox11.MaxLength = 1;
             this.richTextBox11.Multiline = false;
             this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.ReadOnly = true;
             this.richTextBox11.Size = new System.Drawing.Size(76, 48);
             this.richTextBox11.TabIndex = 21;
             this.richTextBox11.Text = "";
@@ -561,12 +562,13 @@
             // richTextBox12
             // 
             this.richTextBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox12.Location = new System.Drawing.Point(227, 295);
             this.richTextBox12.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox12.MaxLength = 2;
             this.richTextBox12.Multiline = false;
             this.richTextBox12.Name = "richTextBox12";
+            this.richTextBox12.ReadOnly = true;
             this.richTextBox12.Size = new System.Drawing.Size(76, 48);
             this.richTextBox12.TabIndex = 20;
             this.richTextBox12.Text = "";

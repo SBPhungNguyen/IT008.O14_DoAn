@@ -62,12 +62,12 @@ namespace Nhap
             }
 
             // datagrid 2 cot
-            NotNhac.Columns.Add("1", typeof(string));
-            NotNhac.Columns.Add("2", typeof(string));
+            NotNhac.Columns.Add("pitch", typeof(string));
+            NotNhac.Columns.Add("speed", typeof(string));
 
             dataGridView1.DataSource = NotNhac;
-            dataGridView1.Columns["1"].Width = 100;
-            dataGridView1.Columns["2"].Width = 100;
+            dataGridView1.Columns["pitch"].Width = 100;
+            dataGridView1.Columns["speed"].Width = 100;
 
         }
 
@@ -84,12 +84,12 @@ namespace Nhap
                 User = username;
             }
             // datagrid 2 cot
-            NotNhac.Columns.Add("1", typeof(string));
-            NotNhac.Columns.Add("2", typeof(string));
+            NotNhac.Columns.Add("pitch", typeof(string));
+            NotNhac.Columns.Add("speed", typeof(string));
 
             dataGridView1.DataSource = NotNhac;
-            dataGridView1.Columns["1"].Width = 100;
-            dataGridView1.Columns["2"].Width = 100;
+            dataGridView1.Columns["pitch"].Width = 100;
+            dataGridView1.Columns["speed"].Width = 100;
             //
             richTextBox4.Text = sheetname;
             string inputString = sheetdetails;
@@ -104,7 +104,7 @@ namespace Nhap
                     DataRow row = NotNhac.NewRow();
                     if (line[0].ToString() == ".") // dau cham doi
                     {
-                        row["1"] = ".";
+                        row["pitch"] = ".";
                         int length_of_line = line.Length;
                         for (int i = 1; i < length_of_line; i++)
                             row[i] = line[i].ToString();
@@ -114,7 +114,7 @@ namespace Nhap
                     }
                     else // cac not binh thuong
                     {
-                        row["1"] = line[0].ToString() + line[1].ToString();
+                        row["pitch"] = line[0].ToString() + line[1].ToString();
                         int length_of_line = line.Length;
                         for (int i = 2; i < length_of_line; i++)
                             row[i - 1] = line[i].ToString();
@@ -457,7 +457,7 @@ namespace Nhap
                 else
                 {
                     DataRow row = NotNhac.NewRow();
-                    row["1"] = richTextBox12.Text;
+                    row["pitch"] = richTextBox12.Text;
                     /*row["2"] = richTextBox11.Text;
                     row["3"] = richTextBox10.Text;
                     row["4"] = richTextBox9.Text;
@@ -465,7 +465,7 @@ namespace Nhap
                     row["6"] = richTextBox7.Text;
                     row["7"] = richTextBox6.Text;
                     row["8"] = richTextBox5.Text;*/
-                    row["2"] = richTextBox11.Text;
+                    row["speed"] = richTextBox11.Text;
                     NotNhac.Rows.Add(row);
                     richTextBox12.Text = richTextBox11.Text = /*richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text =*/ "";
                 }
@@ -480,7 +480,7 @@ namespace Nhap
                 else
                 {
                     DataRow row = NotNhac.Rows[editedrowindex];
-                    row["1"] = richTextBox12.Text;
+                    row["pitch"] = richTextBox12.Text;
                     /*row["2"] = richTextBox11.Text;
                     row["3"] = richTextBox10.Text;
                     row["4"] = richTextBox9.Text;
@@ -488,7 +488,7 @@ namespace Nhap
                     row["6"] = richTextBox7.Text;
                     row["7"] = richTextBox6.Text;
                     row["8"] = richTextBox5.Text;*/
-                    row["2"] = richTextBox11.Text;
+                    row["speed"] = richTextBox11.Text;
                     richTextBox12.Text = richTextBox11.Text/* = richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text */= "";
                     edit = 0;
                 }
@@ -565,8 +565,8 @@ namespace Nhap
                 editedrowindex = dataGridView1.SelectedRows[0].Index;
                 DataRow editedRow = ((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row;
                 edit = 1;
-                richTextBox12.Text = editedRow["1"].ToString();
-                richTextBox11.Text = editedRow["2"].ToString();
+                richTextBox12.Text = editedRow["pitch"].ToString();
+                richTextBox11.Text = editedRow["speed"].ToString();
                /*/ richTextBox10.Text = editedRow["3"].ToString();
                 richTextBox9.Text = editedRow["4"].ToString();
                 richTextBox5.Text = editedRow["5"].ToString();
@@ -698,7 +698,7 @@ namespace Nhap
                         DataRow row = NotNhac.NewRow();
                         if (line[0].ToString() == ".") // dau cham doi
                         {
-                            row["1"] = ".";
+                            row["pitch"] = ".";
                             int length_of_line = line.Length;
                             for (int i = 1; i < length_of_line; i++)
                                 row[i] = line[i].ToString();
@@ -706,7 +706,7 @@ namespace Nhap
                         }
                         else // cac not binh thuong
                         {
-                            row["1"] = line[0].ToString() + line[1].ToString();
+                            row["pitch"] = line[0].ToString() + line[1].ToString();
                             int length_of_line = line.Length;
                             for (int i = 2; i < length_of_line; i++)
                                 row[i - 1] = line[i].ToString();
@@ -756,11 +756,11 @@ namespace Nhap
                 NotNhac = new DataTable();
                 richTextBox11.Text = richTextBox12.Text = "";
                 // sua ui datagrid 
-                NotNhac.Columns.Add("1", typeof(string));
-                NotNhac.Columns.Add("2", typeof(string));
+                NotNhac.Columns.Add("pitch", typeof(string));
+                NotNhac.Columns.Add("speed", typeof(string));
                 dataGridView1.DataSource = NotNhac;
-                dataGridView1.Columns["1"].Width = 100;
-                dataGridView1.Columns["2"].Width = 100;
+                dataGridView1.Columns["pitch"].Width = 100;
+                dataGridView1.Columns["speed"].Width = 100;
             }
         }
 

@@ -37,19 +37,26 @@ namespace Nhap
 
         private void Public_Load(object sender, EventArgs e)
         {
+
             LoadData();
         }
 
         private void LoadData()
         {
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Username as Creator, SheetName as [Song Name], SheetDetails as [Sheet Details], Likes FROM PublicSong", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Username as Creator, SheetName as [Song Name], Likes, SheetDetails as [Sheet Details] FROM PublicSong", connection);
             dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
             dataGridView1.Columns["Creator"].Width = 75;
-            dataGridView1.Columns["Song Name"].Width = 200;
-            dataGridView1.Columns["Sheet Details"].Width = 225;
-            dataGridView1.Columns["Likes"].Width = 43;
+            dataGridView1.Columns["Song Name"].Width = 435;
+            dataGridView1.Columns["Sheet Details"].Width = 0;
+            dataGridView1.Columns["Likes"].Width = 53;
+
+            dataGridView1.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            dataGridView1.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+
             if (dataGridView1.Rows.Count > 0)
             {
                 int rowIndex = 0;
