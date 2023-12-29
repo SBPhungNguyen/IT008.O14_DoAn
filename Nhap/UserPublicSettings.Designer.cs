@@ -46,9 +46,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(36, 97);
+            this.label2.Location = new System.Drawing.Point(48, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 22);
+            this.label2.Size = new System.Drawing.Size(238, 28);
             this.label2.TabIndex = 28;
             this.label2.Text = "Your current Public Songs:";
             // 
@@ -59,12 +60,14 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 150);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(510, 142);
+            this.dataGridView1.Size = new System.Drawing.Size(680, 175);
             this.dataGridView1.TabIndex = 27;
             // 
             // label1
@@ -73,9 +76,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(67, 24);
+            this.label1.Location = new System.Drawing.Point(89, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(449, 64);
+            this.label1.Size = new System.Drawing.Size(564, 82);
             this.label1.TabIndex = 26;
             this.label1.Text = "Public Songs Settings";
             // 
@@ -84,9 +88,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(36, 267);
+            this.label3.Location = new System.Drawing.Point(48, 329);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 22);
+            this.label3.Size = new System.Drawing.Size(133, 28);
             this.label3.TabIndex = 28;
             this.label3.Text = "Selected Song:";
             // 
@@ -94,9 +99,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16F);
-            this.button1.Location = new System.Drawing.Point(40, 336);
+            this.button1.Location = new System.Drawing.Point(53, 414);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 34);
+            this.button1.Size = new System.Drawing.Size(331, 42);
             this.button1.TabIndex = 29;
             this.button1.Text = "Upload a New Song";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,9 +113,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(36, 289);
+            this.label4.Location = new System.Drawing.Point(48, 356);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 22);
+            this.label4.Size = new System.Drawing.Size(115, 28);
             this.label4.TabIndex = 30;
             this.label4.Text = "Song Name:";
             // 
@@ -118,9 +125,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(135, 289);
+            this.label5.Location = new System.Drawing.Point(180, 356);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 22);
+            this.label5.Size = new System.Drawing.Size(37, 28);
             this.label5.TabIndex = 31;
             this.label5.Text = "     ";
             // 
@@ -128,9 +136,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16F);
-            this.button2.Location = new System.Drawing.Point(302, 336);
+            this.button2.Location = new System.Drawing.Point(403, 414);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 34);
+            this.button2.Size = new System.Drawing.Size(331, 42);
             this.button2.TabIndex = 32;
             this.button2.Text = "Delete Selected Song";
             this.button2.UseVisualStyleBackColor = false;
@@ -140,9 +149,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button3.Font = new System.Drawing.Font("Monotype Corsiva", 14F);
-            this.button3.Location = new System.Drawing.Point(435, 94);
+            this.button3.Location = new System.Drawing.Point(580, 116);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 29);
+            this.button3.Size = new System.Drawing.Size(153, 36);
             this.button3.TabIndex = 33;
             this.button3.Text = "Refresh";
             this.button3.UseVisualStyleBackColor = false;
@@ -150,10 +160,10 @@
             // 
             // UserPublicSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(589, 406);
+            this.ClientSize = new System.Drawing.Size(785, 500);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -165,6 +175,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "UserPublicSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserPublicSettings";

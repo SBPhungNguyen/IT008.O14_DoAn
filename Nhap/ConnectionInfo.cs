@@ -13,7 +13,7 @@ namespace Nhap
     // Suong: F
     internal class ConnectionInfo
     {
-        public static String connString = "Data Source=F;Initial Catalog=MusicLogin;Integrated Security=True";
+        public static String connString = "Data Source=LAPTOP-8KCG746L;Initial Catalog=MusicLogin;Integrated Security=True";
         public string ConnectionCommand() 
         { return @connString; }
     }

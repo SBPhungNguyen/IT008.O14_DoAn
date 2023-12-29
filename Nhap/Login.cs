@@ -17,6 +17,8 @@ namespace Nhap
         bool check = false;
         Form1 form1 = null;
 
+
+        Signup signup;
         public Login()
         {
             InitializeComponent();
@@ -85,8 +87,11 @@ namespace Nhap
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form form = new Signup();
-            form.Show();
+            //
+            Form form = new Signup(this);
+            form.ShowDialog();
+
+            this.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

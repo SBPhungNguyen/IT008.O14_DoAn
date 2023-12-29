@@ -791,7 +791,7 @@ namespace Nhap
         private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Select = new Select(User, 0);
-            Select.Show();
+            Select.ShowDialog();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -822,21 +822,22 @@ namespace Nhap
         private void deleteAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Delete = new Delete(User);
-            Delete.Show();
+            Delete.ShowDialog();
 
         }
 
         private void guideToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Guide guide = new Guide();
-            guide.Show();
+            guide.ShowDialog();
 
             
         }
 
         private void publicSongsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Public Public = new Public(User); Public.Show();
+            Public Public = new Public(User); 
+            Public.ShowDialog();
         }
 
         private void button22_Click(object sender, EventArgs e) //keyboard enable

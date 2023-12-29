@@ -37,9 +37,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 14F);
-            this.button1.Location = new System.Drawing.Point(153, 90);
+            this.button1.Location = new System.Drawing.Point(204, 111);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 35);
+            this.button1.Size = new System.Drawing.Size(152, 43);
             this.button1.TabIndex = 5;
             this.button1.Text = "Select";
             this.button1.UseVisualStyleBackColor = true;
@@ -50,32 +51,37 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(30, 23);
+            this.label1.Location = new System.Drawing.Point(40, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 22);
+            this.label1.Size = new System.Drawing.Size(316, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "Select the Song you want to Delete:";
             // 
             // comboBoxSheetNames
             // 
             this.comboBoxSheetNames.FormattingEnabled = true;
-            this.comboBoxSheetNames.Location = new System.Drawing.Point(33, 54);
+            this.comboBoxSheetNames.Location = new System.Drawing.Point(44, 66);
+            this.comboBoxSheetNames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxSheetNames.Name = "comboBoxSheetNames";
-            this.comboBoxSheetNames.Size = new System.Drawing.Size(349, 21);
+            this.comboBoxSheetNames.Size = new System.Drawing.Size(464, 24);
             this.comboBoxSheetNames.TabIndex = 3;
             this.comboBoxSheetNames.SelectedIndexChanged += new System.EventHandler(this.comboBoxSheetNames_SelectedIndexChanged);
             this.comboBoxSheetNames.Click += new System.EventHandler(this.comboBoxSheetNames_Click);
             // 
             // Delete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(416, 146);
+            this.ClientSize = new System.Drawing.Size(555, 180);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxSheetNames);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "Delete";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete";

@@ -422,7 +422,7 @@
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button21.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.Location = new System.Drawing.Point(461, 295);
-            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(100, 48);
             this.button21.TabIndex = 8;
@@ -446,7 +446,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(227, 107);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 48;
@@ -465,7 +465,7 @@
             this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.Location = new System.Drawing.Point(68, 527);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(67, 50);
             this.button23.TabIndex = 19;
@@ -482,7 +482,7 @@
             this.richTextBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox11.Location = new System.Drawing.Point(311, 295);
-            this.richTextBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox11.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox11.MaxLength = 1;
             this.richTextBox11.Multiline = false;
             this.richTextBox11.Name = "richTextBox11";
@@ -496,7 +496,7 @@
             this.richTextBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox12.Location = new System.Drawing.Point(227, 295);
-            this.richTextBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox12.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox12.MaxLength = 2;
             this.richTextBox12.Multiline = false;
             this.richTextBox12.Name = "richTextBox12";
@@ -512,7 +512,7 @@
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(68, 181);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(91, 38);
@@ -525,7 +525,7 @@
             this.richTextBox3.BackColor = System.Drawing.Color.White;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(68, 215);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox3.MaxLength = 3;
             this.richTextBox3.Multiline = false;
             this.richTextBox3.Name = "richTextBox3";
@@ -541,7 +541,7 @@
             this.richTextBox4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.richTextBox4.Location = new System.Drawing.Point(-15, 32);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox4.Size = new System.Drawing.Size(1056, 54);
@@ -556,7 +556,7 @@
             this.button22.BackgroundImage = global::Nhap.Properties.Resources.keyboardlogo2;
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button22.Location = new System.Drawing.Point(829, 132);
-            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(107, 89);
             this.button22.TabIndex = 22;
@@ -570,7 +570,7 @@
             this.button20.BackgroundImage = global::Nhap.Properties.Resources.Curved_Note;
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button20.Location = new System.Drawing.Point(68, 468);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Margin = new System.Windows.Forms.Padding(4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(67, 50);
             this.button20.TabIndex = 6;
@@ -584,7 +584,7 @@
             this.button19.BackgroundImage = global::Nhap.Properties.Resources.Black_Note;
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button19.Location = new System.Drawing.Point(68, 409);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Margin = new System.Windows.Forms.Padding(4);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(67, 50);
             this.button19.TabIndex = 5;
@@ -598,7 +598,7 @@
             this.button18.BackgroundImage = global::Nhap.Properties.Resources.White_Note;
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button18.Location = new System.Drawing.Point(68, 351);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Margin = new System.Windows.Forms.Padding(4);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(67, 50);
             this.button18.TabIndex = 4;
@@ -612,7 +612,7 @@
             this.button17.BackgroundImage = global::Nhap.Properties.Resources.Round_Note;
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button17.Location = new System.Drawing.Point(68, 294);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(67, 50);
             this.button17.TabIndex = 3;
@@ -626,7 +626,7 @@
             this.button16.BackgroundImage = global::Nhap.Properties.Resources.Play_Button;
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button16.Location = new System.Drawing.Point(68, 107);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Margin = new System.Windows.Forms.Padding(4);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(67, 54);
             this.button16.TabIndex = 2;
@@ -666,9 +666,11 @@
             this.Controls.Add(this.button16);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

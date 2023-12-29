@@ -26,9 +26,25 @@ namespace Nhap
         DataTable dataTable;
         string LikesHistory = "";
         int rowIndex = 0;
+
+        Form1 form1;
         public Public(string username)
         {
             InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            connection.Open();
+            User = username;
+            dataGridView1.CellClick += DataGridView1_CellClick;
+        }
+        public Public(string username, Form1 f)
+        {
+            InitializeComponent();
+
+            form1 = f;
+            form1.Hide();
+            
+
             ConnectionInfo connectionInfo = new ConnectionInfo();
             connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
@@ -177,7 +193,7 @@ namespace Nhap
         private void button2_Click(object sender, EventArgs e)
         {
             UserPublicSettings settings = new UserPublicSettings(User);
-            settings.Show();
+            settings.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e) //Like Song

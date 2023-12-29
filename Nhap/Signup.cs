@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Nhap
 {
@@ -21,9 +22,21 @@ namespace Nhap
         string username = "";
         string password = "";
         string password2 = "";
+        Login login;
         public Signup()
         {
             InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            connection.Open();
+        }
+        public Signup(Login f)
+        {
+            InitializeComponent();
+
+            login = f;
+            login.Hide();
+
             ConnectionInfo connectionInfo = new ConnectionInfo();
             connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
