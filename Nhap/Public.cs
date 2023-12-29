@@ -183,6 +183,7 @@ namespace Nhap
             }
             else
             {
+                /*
                 if (richTextBox1.Text != " ")
                 {
                     richTextBox1.Text = "";
@@ -192,7 +193,18 @@ namespace Nhap
                 {
                     richTextBox1.Text = "";
                 }
-                LikesHistory = User + " liked this!\n";
+
+                LikesHistory = User + " liked this!\n";*/
+                if (richTextBox1.Text != " ")
+                {
+                    richTextBox1.Text = "";
+                    LikesHistory = LikesHistory + '\n';
+                }
+                else if (richTextBox1.Text == " ")
+                {
+                    richTextBox1.Text = "";
+                }
+                LikesHistory = LikesHistory + User + " liked this!";
                 using (SqlCommand LikesUpdate = new SqlCommand("UPDATE [MusicLogin].[dbo].[PublicSong] SET Likes = Likes + 1, LikesHistory = @NewLikesHistory WHERE Username = @Username AND SheetName = @SheetName;", connection))
                 {
                     LikesUpdate.Parameters.AddWithValue("@Username", creator);

@@ -15,6 +15,7 @@ namespace Nhap
         SqlConnection connection;
 
         bool check = false;
+        Form1 form1 = null;
 
         public Login()
         {
@@ -22,6 +23,20 @@ namespace Nhap
             ConnectionInfo connectionInfo = new ConnectionInfo();
             connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
+        }
+
+        public Login(Form1 form1)
+        {
+            InitializeComponent();
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            connection.Open();
+
+            this.form1 = form1;
+
+            ////////
+            form1.Hide();
+            ///////
         }
 
         private static string GetHash(string input)
@@ -56,6 +71,8 @@ namespace Nhap
             {
                 reader.Close();
                 this.Hide();
+
+
                 Form Form1 = new Form1(username);
                 Form1.Show();
             }

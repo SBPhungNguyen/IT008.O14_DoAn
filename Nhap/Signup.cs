@@ -47,7 +47,11 @@ namespace Nhap
             username = textBox1.Text;
             password = textBox2.Text;
             password2 = textBox3.Text;
-
+            if (username=="")
+            {
+                MessageBox.Show("Username should not be null","Username problem");
+                return;
+            }    
             if (password == password2)
             {
                 // Hash the password before storing it

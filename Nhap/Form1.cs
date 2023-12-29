@@ -49,6 +49,8 @@ namespace Nhap
         System.Media.SoundPlayer C6 = new System.Media.SoundPlayer(Properties.Resources.a76);   //  DO_6
         private RichTextBox check_NoteTextbox_Keydown;
 
+        int saved;
+
         public Form1(string username)
         {
             InitializeComponent();
@@ -153,6 +155,7 @@ namespace Nhap
             richTextBox11.SelectionAlignment = HorizontalAlignment.Center;
 
 
+            saved = 0;
 
         }
 
@@ -222,6 +225,8 @@ namespace Nhap
                 richTextBox6.Text = ".";
                 richTextBox5.Text = ".";*/
             }
+
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -233,6 +238,7 @@ namespace Nhap
         {
             D4.Play();
             display_on_textbox("D4");
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -346,15 +352,15 @@ namespace Nhap
         {
             if (0 <= richTextBox4.Text.Length && richTextBox4.Text.Length <= 20)
             {
-                SetFontForEntireText(new Font("Calibri", 22));
+                SetFontForEntireText(new Font("Calibri", 22,FontStyle.Bold));
             }
             else if (21 <= richTextBox4.Text.Length && richTextBox4.Text.Length <= 35)
             {
-                SetFontForEntireText(new Font("Calibri", 18));
+                SetFontForEntireText(new Font("Calibri", 18, FontStyle.Bold));
             }
             else
             {
-                SetFontForEntireText(new Font("Calibri", 14));
+                SetFontForEntireText(new Font("Calibri", 14, FontStyle.Bold));
             }
 
             if (richTextBox4.Text.Length > 50)
@@ -364,6 +370,9 @@ namespace Nhap
             }
 
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
+
+            saved = 1;
+
         }
 
         private void SetFontForEntireText(Font font)
@@ -522,6 +531,8 @@ namespace Nhap
                     edit = 0;
                 }
             }
+
+            saved = 1;
         }
 
         private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e) //xoa dong
@@ -530,6 +541,9 @@ namespace Nhap
             {
                 NotNhac.Rows.RemoveAt(e.RowIndex);
             }
+
+            saved = 1;
+
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -672,6 +686,8 @@ namespace Nhap
                 MessageBox.Show("Error: " + ex.Message);
             }
             connection.Close();
+
+            saved = 0;
         }
         ////////////////////////////////////////////
         private void exportToolStripMenuItem_Click(object sender, EventArgs e) // File -> Export
@@ -696,6 +712,8 @@ namespace Nhap
                     }
                 }
             }
+
+            saved = 0;
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e) // File -> Open
@@ -744,12 +762,16 @@ namespace Nhap
                     }
                 }
             }
+
+            saved = 0;
         }
         private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             editedrowindex = -1;
             edit = 0;
             richTextBox12.Text = richTextBox11.Text =/* richTextBox10.Text = richTextBox9.Text = richTextBox8.Text = richTextBox7.Text = richTextBox6.Text = richTextBox5.Text =*/ "";
+
+            saved = 1;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -762,6 +784,8 @@ namespace Nhap
                 }
             }
             this.Close();
+            Environment.Exit(0);
+
         }
 
         private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -791,18 +815,23 @@ namespace Nhap
                 dataGridView1.Columns["pitch"].Width = 100;
                 dataGridView1.Columns["speed"].Width = 100;
             }
+
+            saved = 0;
         }
 
         private void deleteAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Delete = new Delete(User);
             Delete.Show();
+
         }
 
         private void guideToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Guide guide = new Guide();
             guide.Show();
+
+            
         }
 
         private void publicSongsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -824,6 +853,23 @@ namespace Nhap
                 button22.BackColor = Color.Black;
                 button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo1;
             }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            // khi user bam logout
+            if (saved==1)
+            {
+                DialogResult result = MessageBox.Show("You haven't saved your file yet, do you wish to execute this action?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+
+            }
+            Login login = new Login(this);
+            login.Show();
         }
     }
 }
