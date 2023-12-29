@@ -121,91 +121,106 @@
   <data name="a70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a70.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="a89" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a89.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a83" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a83.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a68" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a68.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="a73" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a73.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a75" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a75.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="playbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\playbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="a84" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a84.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Round_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Round_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Play_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Play_Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="a76" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a76.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a85" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a85.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Black_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Black_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="White_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\White_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="a79" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a79.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a71" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a71.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a65" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a65.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="a80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a80.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="a72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a72.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="a74" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a74.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Curved_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Curved_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pause_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Guide_1_LogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guide_1_LogIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Guide_2_NameYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Guide_2_NameYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Guide_34_ChooseNotNhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guide_34_ChooseNotNhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a89" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a89.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a71" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a71.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MyCrotchetLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyCrotchetLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Guide_5_SaveNotNhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Guide_5_SaveNotNhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Guide_6_PlayYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guide_6_PlayYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="keyboardlogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboardlogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Guide_7_SaveYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guide_7_SaveYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a85" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a85.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Guide_8_OtherOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Guide_8_OtherOptions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MyCrotchetLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyCrotchetLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="keyboardlogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboardlogo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_34_ChooseNotNhac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_34_ChooseNotNhac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a76" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a76.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Round_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Round_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_7_SaveYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_7_SaveYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pause_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\80c52538116b504f0d45858a707d0c4f-pause-flat-button-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a80.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a75" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a75.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a83" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a83.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="playbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Curved_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Curved_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyboardlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboardlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a68.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a74.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="White_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_6_PlayYourSong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_6_PlayYourSong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guide_1_LogIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guide_1_LogIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Black_Note" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Black_Note.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SendSymbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SendSymbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a79" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a79.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="a65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a65.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="thumbsup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumbsup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

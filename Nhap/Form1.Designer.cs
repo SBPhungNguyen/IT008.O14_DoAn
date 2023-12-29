@@ -47,11 +47,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +67,12 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -322,71 +323,6 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button20
-            // 
-            this.button20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button20.BackColor = System.Drawing.Color.Silver;
-            this.button20.BackgroundImage = global::Nhap.Properties.Resources.Curved_Note;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button20.Location = new System.Drawing.Point(51, 380);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(50, 41);
-            this.button20.TabIndex = 6;
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button19
-            // 
-            this.button19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button19.BackColor = System.Drawing.Color.Silver;
-            this.button19.BackgroundImage = global::Nhap.Properties.Resources.Black_Note;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Location = new System.Drawing.Point(51, 332);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(50, 41);
-            this.button19.TabIndex = 5;
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button18
-            // 
-            this.button18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button18.BackColor = System.Drawing.Color.Silver;
-            this.button18.BackgroundImage = global::Nhap.Properties.Resources.White_Note;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.Location = new System.Drawing.Point(51, 285);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(50, 41);
-            this.button18.TabIndex = 4;
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button17
-            // 
-            this.button17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button17.BackColor = System.Drawing.Color.Silver;
-            this.button17.BackgroundImage = global::Nhap.Properties.Resources.Round_Note;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Location = new System.Drawing.Point(51, 239);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(50, 41);
-            this.button17.TabIndex = 3;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button16
-            // 
-            this.button16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button16.BackgroundImage = global::Nhap.Properties.Resources.Play_Button;
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button16.Location = new System.Drawing.Point(51, 87);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(50, 44);
-            this.button16.TabIndex = 2;
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -594,7 +530,7 @@
             this.richTextBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Calibri", 24F);
+            this.richTextBox4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.richTextBox4.Location = new System.Drawing.Point(-11, 26);
             this.richTextBox4.Name = "richTextBox4";
@@ -604,12 +540,91 @@
             this.richTextBox4.Text = "[Name Your Song]";
             this.richTextBox4.TextChanged += new System.EventHandler(this.richTextBox4_TextChanged);
             // 
+            // button22
+            // 
+            this.button22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button22.BackColor = System.Drawing.Color.Black;
+            this.button22.BackgroundImage = global::Nhap.Properties.Resources.keyboardlogo2;
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button22.Location = new System.Drawing.Point(622, 107);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(80, 72);
+            this.button22.TabIndex = 22;
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button20
+            // 
+            this.button20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button20.BackColor = System.Drawing.Color.Silver;
+            this.button20.BackgroundImage = global::Nhap.Properties.Resources.Curved_Note;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button20.Location = new System.Drawing.Point(51, 380);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(50, 41);
+            this.button20.TabIndex = 6;
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button19
+            // 
+            this.button19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button19.BackColor = System.Drawing.Color.Silver;
+            this.button19.BackgroundImage = global::Nhap.Properties.Resources.Black_Note;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button19.Location = new System.Drawing.Point(51, 332);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(50, 41);
+            this.button19.TabIndex = 5;
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button18
+            // 
+            this.button18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button18.BackColor = System.Drawing.Color.Silver;
+            this.button18.BackgroundImage = global::Nhap.Properties.Resources.White_Note;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button18.Location = new System.Drawing.Point(51, 285);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(50, 41);
+            this.button18.TabIndex = 4;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button17.BackColor = System.Drawing.Color.Silver;
+            this.button17.BackgroundImage = global::Nhap.Properties.Resources.Round_Note;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.Location = new System.Drawing.Point(51, 239);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(50, 41);
+            this.button17.TabIndex = 3;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button16.BackColor = System.Drawing.Color.Silver;
+            this.button16.BackgroundImage = global::Nhap.Properties.Resources.Play_Button;
+            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button16.Location = new System.Drawing.Point(51, 87);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(50, 44);
+            this.button16.TabIndex = 2;
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(770, 504);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.richTextBox11);
             this.Controls.Add(this.richTextBox12);
             this.Controls.Add(this.button23);
@@ -686,6 +701,7 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.ToolStripMenuItem publicSongsToolStripMenuItem;
+        private System.Windows.Forms.Button button22;
     }
 }
 

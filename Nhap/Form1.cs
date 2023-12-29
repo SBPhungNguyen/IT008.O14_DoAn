@@ -30,6 +30,7 @@ namespace Nhap
         int timer_playing = 0;
         int editedrowindex = -1;
         int edit = 0;
+        bool KeyboardEnabled = false;
         DataTable NotNhac = new DataTable();
         System.Media.SoundPlayer C4 = new System.Media.SoundPlayer(Properties.Resources.a84);   //  DO_4
         System.Media.SoundPlayer D4 = new System.Media.SoundPlayer(Properties.Resources.a89);   //  RE_4
@@ -319,24 +320,27 @@ namespace Nhap
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            /*switch (e.KeyCode)
+            if (KeyboardEnabled)
             {
-                case Keys.Q: C4.Play(); break;
-                case Keys.W: D4.Play(); break;
-                case Keys.E: E4.Play(); break;
-                case Keys.R: F4.Play(); break;
-                case Keys.T: G4.Play(); break;
-                case Keys.A: A4.Play(); break;
-                case Keys.S: B4.Play(); break;
-                case Keys.D: C5.Play(); break;
-                case Keys.F: D5.Play(); break;
-                case Keys.G: E5.Play(); break;
-                case Keys.Z: F5.Play(); break;
-                case Keys.X: G5.Play(); break;
-                case Keys.C: A5.Play(); break;
-                case Keys.V: B5.Play(); break;
-                case Keys.B: C6.Play(); break;
-            }*/
+                switch (e.KeyCode)
+                {
+                    case Keys.Q: C4.Play(); break;
+                    case Keys.W: D4.Play(); break;
+                    case Keys.E: E4.Play(); break;
+                    case Keys.R: F4.Play(); break;
+                    case Keys.T: G4.Play(); break;
+                    case Keys.A: A4.Play(); break;
+                    case Keys.S: B4.Play(); break;
+                    case Keys.D: C5.Play(); break;
+                    case Keys.F: D5.Play(); break;
+                    case Keys.G: E5.Play(); break;
+                    case Keys.Z: F5.Play(); break;
+                    case Keys.X: G5.Play(); break;
+                    case Keys.C: A5.Play(); break;
+                    case Keys.V: B5.Play(); break;
+                    case Keys.B: C6.Play(); break;
+                }
+            }
         }
         private void richTextBox4_TextChanged(object sender, EventArgs e)
         {
@@ -806,6 +810,21 @@ namespace Nhap
             Public Public = new Public(User); Public.Show();
         }
 
+        private void button22_Click(object sender, EventArgs e) //keyboard enable
+        {
+            if(KeyboardEnabled)
+            {
+                KeyboardEnabled = false;
+                button22.BackColor = Color.Black;
+                button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo2;
+            }
+            else
+            {
+                KeyboardEnabled = true;
+                button22.BackColor = Color.Black;
+                button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo1;
+            }
+        }
     }
 }
 

@@ -231,5 +231,20 @@
   <ItemGroup>
     <None Include="Resources\MyCrotchetLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboardlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboardlogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboardlogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbsup.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

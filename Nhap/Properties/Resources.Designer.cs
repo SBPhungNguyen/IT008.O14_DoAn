@@ -288,6 +288,36 @@ namespace Nhap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap keyboardlogo {
+            get {
+                object obj = ResourceManager.GetObject("keyboardlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap keyboardlogo1 {
+            get {
+                object obj = ResourceManager.GetObject("keyboardlogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap keyboardlogo2 {
+            get {
+                object obj = ResourceManager.GetObject("keyboardlogo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MyCrotchetLogo {
             get {
                 object obj = ResourceManager.GetObject("MyCrotchetLogo", resourceCulture);
@@ -331,6 +361,26 @@ namespace Nhap.Properties {
         internal static System.Drawing.Bitmap Round_Note {
             get {
                 object obj = ResourceManager.GetObject("Round_Note", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SendSymbol {
+            get {
+                object obj = ResourceManager.GetObject("SendSymbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thumbsup {
+            get {
+                object obj = ResourceManager.GetObject("thumbsup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
