@@ -65,11 +65,11 @@ namespace Nhap
         {
             if (SheetName == null)
             {
-                MessageBox.Show("Please Select a Song.", "Selection Failed");
+                MessageBox.Show("Please select a song.", "Selection failed");
             }
             else
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete the Song?",
+                DialogResult result = MessageBox.Show("Are you sure you want to delete the song?",
                     "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -85,12 +85,12 @@ namespace Nhap
                         SqlDataReader reader = command.ExecuteReader();
                         reader.Read();
                         reader.Close();
-                        MessageBox.Show("Song Deleted Successfully", "Success");
+                        MessageBox.Show("Song deleted successfully", "Success");
                         LoadSheetNames();
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Song Deletion Failed", "Failure");
+                        MessageBox.Show("Song deletion failed", "Failure");
                     }
                 }
                 else

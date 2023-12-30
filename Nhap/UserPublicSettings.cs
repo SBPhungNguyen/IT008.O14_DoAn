@@ -83,7 +83,7 @@ namespace Nhap
 
                 string songName = selectedRow.Cells["Song Name"].Value.ToString();
 
-                DialogResult result = MessageBox.Show($"Are you sure you want to Delete the Song?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show($"Are you sure you want to remove the song from public?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -101,7 +101,7 @@ namespace Nhap
             }
             else
             {
-                MessageBox.Show("Please Select a song first before you Delete Them.", "Song Deletion Failed");
+                MessageBox.Show("Please select a song before removing it from public.", "Remove from public failed");
             }
         }
 

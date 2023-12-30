@@ -28,9 +28,9 @@ namespace Nhap
             User = usermame;
             status = STATUS;
             if (status == 0)
-                label1.Text = "Select the Song you want to Edit: ";
+                label1.Text = "Choose a song to open: ";
             else if (status == 1)
-                label1.Text = "Select the Song you want to Upload to Public: ";
+                label1.Text = "Choose a song to publish: ";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Nhap
         {
             if (SheetName == null)
             {
-                MessageBox.Show("Please Select a Song.", "Selection Failed");
+                MessageBox.Show("Please select a song.", "Selection failed");
             }
             else
             {
@@ -121,7 +121,7 @@ namespace Nhap
                                     // Check if the song already exists in PublicSong
                                     if (SongExistsInPublicSong(User, SheetName))
                                     {
-                                        MessageBox.Show("You have already uploaded a song with this name to Public Songs.", "Upload Failed");
+                                        MessageBox.Show("You have already published a song with this name.", "Publish failed");
                                     }
                                     else
                                     {
@@ -172,24 +172,24 @@ namespace Nhap
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Song successfully uploaded to Public Songs.", "Upload Successful");
+                        MessageBox.Show("Song successfully published.", "Publish successful");
                         this.Hide();
                         LoadSheetNames();
                     }
                     else
                     {
-                        MessageBox.Show("Failed to upload song to Public Songs.", "Upload Failed");
+                        MessageBox.Show("Failed to publish the song.", "Publish failed");
                     }
                 }
                 catch (SqlException ex)
                 {
                     if (ex.Number == 2627) // Unique constraint violation
                     {
-                        MessageBox.Show("You have already uploaded a song with this name to Public Songs.", "Upload Failed");
+                        MessageBox.Show("You have already published a song with this name.", "Publish failed");
                     }
                     else
                     {
-                        MessageBox.Show("Error uploading song to Public Songs: " + ex.Message, "Upload Failed");
+                        MessageBox.Show("Error publishing song: " + ex.Message, "Publish failed");
                     }
                 }
             }

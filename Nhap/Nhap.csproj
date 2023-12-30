@@ -246,5 +246,35 @@
   <ItemGroup>
     <None Include="Resources\thumbsup.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open from account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open from file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\public songs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save to account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save to file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -164,11 +164,11 @@ namespace Nhap
         {
             if (User == null || SheetName == null || sheetdetails == null)
             {
-                MessageBox.Show("Please Select a Song first.", "Opening Song Failed!");
+                MessageBox.Show("Please select a song first.", "Open failed!");
             }
             else
             {
-                DialogResult result = MessageBox.Show("Opening a Public Song will clear your current Music Sheet. Proceed?", "Confirmation", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Opening a public song will clear your current sheet. Proceed?", "Confirmation", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
                 {
@@ -200,7 +200,7 @@ namespace Nhap
         {
             if (User == null || SheetName == null || sheetdetails == null)
             {
-                MessageBox.Show("Please Select a Song first.", "Liking Song Failed!");
+                MessageBox.Show("Please select a song first.", "Like failed!");
             }
             else
             {

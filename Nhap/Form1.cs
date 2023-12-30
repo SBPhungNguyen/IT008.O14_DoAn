@@ -55,6 +55,26 @@ namespace Nhap
         public Form1(string username)
         {
             InitializeComponent();
+            customizeDesign();
+
+            Image new_resized = new Bitmap(Nhap.Properties.Resources._new, 25, 25);
+            NewButton.Image = new_resized;
+            Image open_resized = new Bitmap(Nhap.Properties.Resources.open, 25, 25);
+            OpenButton.Image = open_resized;
+            Image fromaccount_resized = new Bitmap(Nhap.Properties.Resources.open_from_account, 25, 25);
+            FromAccountButton.Image = fromaccount_resized;
+            Image fromfile_resized = new Bitmap(Nhap.Properties.Resources.open_from_file, 25, 25);
+            FromFileButton.Image = fromfile_resized;
+            Image save_resized = new Bitmap(Nhap.Properties.Resources.save, 25, 25);
+            SaveButton.Image = save_resized;
+            Image toaccount_resized = new Bitmap(Nhap.Properties.Resources.save_to_account, 25, 25);
+            ToAccountButton.Image = toaccount_resized;
+            Image tofile_resized = new Bitmap(Nhap.Properties.Resources.save_to_file, 25, 25);
+            ToFileButton.Image = tofile_resized;
+            Image delete_resized = new Bitmap(Nhap.Properties.Resources.delete, 25, 25);
+            DeleteButton.Image = delete_resized;
+            Image publicsongs_resized = new Bitmap(Nhap.Properties.Resources.public_songs, 25, 25);
+            PublicSongsButton.Image = publicsongs_resized;
             ConnectionInfo connectionInfo = new ConnectionInfo();
             connection = new SqlConnection(connectionInfo.ConnectionCommand());
             connection.Open();
@@ -80,6 +100,25 @@ namespace Nhap
             ConnectionInfo connectionInfo = new ConnectionInfo();
             SqlConnection connection = new SqlConnection(connectionInfo.ConnectionCommand());
             InitializeComponent();
+            customizeDesign();
+            Image new_resized = new Bitmap(Nhap.Properties.Resources._new, 25, 25);
+            NewButton.Image = new_resized;
+            Image open_resized = new Bitmap(Nhap.Properties.Resources.open, 25, 25);
+            OpenButton.Image = open_resized;
+            Image fromaccount_resized = new Bitmap(Nhap.Properties.Resources.open_from_account, 25, 25);
+            FromAccountButton.Image = fromaccount_resized;
+            Image fromfile_resized = new Bitmap(Nhap.Properties.Resources.open_from_file, 25, 25);
+            FromFileButton.Image = fromfile_resized;
+            Image save_resized = new Bitmap(Nhap.Properties.Resources.save, 25, 25);
+            SaveButton.Image = save_resized;
+            Image toaccount_resized = new Bitmap(Nhap.Properties.Resources.save_to_account, 25, 25);
+            ToAccountButton.Image = toaccount_resized;
+            Image tofile_resized = new Bitmap(Nhap.Properties.Resources.save_to_file, 25, 25);
+            ToFileButton.Image = tofile_resized;
+            Image delete_resized = new Bitmap(Nhap.Properties.Resources.delete, 25, 25);
+            DeleteButton.Image = delete_resized;
+            Image publicsongs_resized = new Bitmap(Nhap.Properties.Resources.public_songs, 25, 25);
+            PublicSongsButton.Image = publicsongs_resized;
             connection.Open();
             this.KeyPreview = true;
             User = "";
@@ -159,7 +198,28 @@ namespace Nhap
             saved = 0;
 
         }
-
+        private void customizeDesign()
+        {
+            panelOpenSubmenu.Visible = false;
+            panelSaveSubmenu.Visible = false;
+        }
+        private void hideSubmenu()
+        {
+            if (panelOpenSubmenu.Visible == true)
+                panelOpenSubmenu.Visible = false;
+            if (panelSaveSubmenu.Visible == true)
+                panelSaveSubmenu.Visible = false;
+        }
+        private void showSubmenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubmenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
         private void RichTextBox3_KeyDown(object sender, KeyEventArgs e)
         {
             if (!char.IsDigit((char)e.KeyCode) && e.KeyCode != Keys.Back && e.KeyCode != Keys.Left && e.KeyCode != Keys.Right)
@@ -500,7 +560,7 @@ namespace Nhap
                 if (check_StringInBox(richTextBox12) && check_StringInBox2(richTextBox11) /*&& check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5)*/)
                     flag = 1;
                 if (flag == 0)
-                    MessageBox.Show("You cannot add a blank note to the Music Sheet!", "Adding Note Failed");
+                    MessageBox.Show("You cannot add a blank note to the sheet!", "Adding note failed");
                 else
                 {
                     DataRow row = NotNhac.NewRow();
@@ -523,7 +583,7 @@ namespace Nhap
                 if (check_StringInBox(richTextBox12) && check_StringInBox2(richTextBox11)/* && check_StringInBox(richTextBox10) && check_StringInBox(richTextBox9) && check_StringInBox(richTextBox8) && check_StringInBox(richTextBox7) && check_StringInBox(richTextBox6) && check_StringInBox(richTextBox5)*/)
                     flag = 1;
                 if (flag == 0)
-                    MessageBox.Show("Khong dung loai, hay kiem tra lai", "Khong the them vao");
+                    MessageBox.Show("Incorrect type, check again.", "Cannot add");
                 else
                 {
                     DataRow row = NotNhac.Rows[editedrowindex];
@@ -857,7 +917,7 @@ namespace Nhap
             lines = 0;
             timer_playing = 0;
             Array.Clear(notes, 0, notes.Length);
-            DialogResult result = MessageBox.Show("Are you sure you want to create a new blank Music Sheet and clear current Music Sheet??", "Confirmation", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to create a new blank sheet and delete the current one?", "Confirmation", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.No)
             {
@@ -942,7 +1002,7 @@ namespace Nhap
             // khi user bam logout
             if (saved==1)
             {
-                DialogResult result = MessageBox.Show("You haven't saved your file yet, do you wish to execute this action?", "Confirmation", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("You haven't saved your file yet, do you still want to log out?", "Confirmation", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.No)
                 {
@@ -958,6 +1018,262 @@ namespace Nhap
         private void richTextBox3_TextChanged(object sender, EventArgs e)
         {
             
+        }
+        private void NewButton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            DialogResult result = MessageBox.Show("Are you sure you want to create a new sheet and clear the current one?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+                return;
+            else
+            {
+                richTextBox4.Text = "[Name Your Song]";
+                richTextBox3.Text = "";
+                NotNhac = new DataTable();
+                richTextBox11.Text = richTextBox12.Text = "";
+                // sua ui datagrid 
+                NotNhac.Columns.Add("pitch", typeof(string));
+                NotNhac.Columns.Add("speed", typeof(string));
+                dataGridView1.DataSource = NotNhac;
+                dataGridView1.Columns["pitch"].Width = 100;
+                dataGridView1.Columns["speed"].Width = 100;
+            }
+            saved = 0;
+        }
+        private void OpenButton_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panelOpenSubmenu);
+        }
+
+        private void FromAccountButton_Click(object sender, EventArgs e)
+        {
+            // Open From Account code
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            Form Select = new Select(User, 0);
+            Select.ShowDialog();
+            hideSubmenu();
+        }
+
+        private void FromFileButton_Click(object sender, EventArgs e)
+        {
+            // Open From File code
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = @"C:\My Documents";
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Select a file";
+            openFileDialog.ShowDialog();
+            string filePath = openFileDialog.FileName;
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(filePath);
+            if (File.Exists(filePath))
+            {
+                richTextBox4.Text = fileNameWithoutExtension;
+                // Xoa nhung thu dang co trong dataGridView1
+                if (NotNhac.Rows.Count > 0)
+                    NotNhac.Rows.Clear();
+
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        DataRow row = NotNhac.NewRow();
+                        if (line[0].ToString() == ".") // dau cham doi
+                        {
+                            row["pitch"] = ".";
+                            int length_of_line = line.Length;
+                            for (int i = 1; i < length_of_line; i++)
+                                row[i] = line[i].ToString();
+                            NotNhac.Rows.Add(row);
+                        }
+                        else // cac not binh thuong
+                        {
+                            row["pitch"] = line[0].ToString() + line[1].ToString();
+                            int length_of_line = line.Length;
+                            for (int i = 2; i < length_of_line; i++)
+                                row[i - 1] = line[i].ToString();
+                            NotNhac.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+            saved = 0;
+            hideSubmenu();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panelSaveSubmenu);
+        }
+
+        private void ToAccountButton_Click(object sender, EventArgs e)
+        {
+            // Save To Account Code
+            StringBuilder stringBuilder = new StringBuilder();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    stringBuilder.Append(row.Cells[i].Value.ToString());
+                    stringBuilder.Append("");
+                }
+                stringBuilder.Append("\n");
+            }
+            string bigString = stringBuilder.ToString();
+            //
+            ConnectionInfo connectionInfo = new ConnectionInfo();
+            SqlConnection connection = new SqlConnection(connectionInfo.ConnectionCommand());
+            //
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
+            //
+            String checkIfExistsQuery = "SELECT COUNT(*) FROM [MusicLogin].[dbo].[AccountAccess] WHERE Username = @Username AND SheetName = @SheetName";
+
+            SqlCommand checkIfExistsCommand = new SqlCommand(checkIfExistsQuery, connection);
+
+            checkIfExistsCommand.Parameters.AddWithValue("@Username", User);
+            checkIfExistsCommand.Parameters.AddWithValue("@SheetName", richTextBox4.Text);
+
+            int existingRecordCount = (int)checkIfExistsCommand.ExecuteScalar();
+
+            if (existingRecordCount > 0)
+            {
+                DialogResult result = MessageBox.Show("A record with the same Username and SheetName already exists. Do you want to replace the SheetDetails?", "Confirmation", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            String updateQuery = "UPDATE [MusicLogin].[dbo].[AccountAccess] SET SheetDetails = @SheetDetails WHERE Username = @Username AND SheetName = @SheetName";
+
+            SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+
+            updateCommand.Parameters.AddWithValue("@Username", User);
+            updateCommand.Parameters.AddWithValue("@SheetName", richTextBox4.Text);
+            updateCommand.Parameters.AddWithValue("@SheetDetails", bigString);
+
+            try
+            {
+                if (existingRecordCount > 0)
+                {
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show(richTextBox4.Text + " updated successfully!", "Updated!");
+                }
+                else
+                {
+                    updateCommand.CommandText = "INSERT INTO [MusicLogin].[dbo].[AccountAccess] (Username, SheetName, SheetDetails) VALUES (@Username, @SheetName, @SheetDetails)";
+                    updateCommand.ExecuteNonQuery();
+                    MessageBox.Show("Saved successfully!", "Saved!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            connection.Close();
+            saved = 0;
+            hideSubmenu();
+        }
+
+        private void ToFileButton_Click(object sender, EventArgs e)
+        {
+            // Save To File Code
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            saveFileDialog1.Title = "Save your sheet";
+            saveFileDialog1.FileName = richTextBox4.Text + ".txt";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                string filePath = saveFileDialog1.FileName;
+
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        for (int i = 0; i < 2; i++)
+                            writer.Write(row.Cells[i].Value.ToString());
+                        writer.Write("\n");
+                    }
+                }
+            }
+            saved = 0;
+            hideSubmenu();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            Form Delete = new Delete(User);
+            Delete.ShowDialog();
+        }
+
+        private void PublicSongsButton_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            dataGridView1.AllowUserToDeleteRows = true;
+            button21.Enabled = true;
+            //button22.Enabled = true;
+            button16.BackgroundImage = Properties.Resources.Play_Button;
+            for (int j = 0; j <= lines; j++)
+                notes[lines] = "";
+            lines = 0;
+            timer_playing = 0;
+            Array.Clear(notes, 0, notes.Length);
+            Public Public = new Public(User);
+            Public.ShowDialog();
         }
     }
 }
