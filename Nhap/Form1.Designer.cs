@@ -113,7 +113,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.button8, 2, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(319, 434);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(367, 434);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -323,7 +323,7 @@
             this.button21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button21.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(610, 323);
+            this.button21.Location = new System.Drawing.Point(658, 323);
             this.button21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(105, 63);
@@ -347,7 +347,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(393, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(441, 118);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -366,7 +366,7 @@
             this.button23.BackColor = System.Drawing.Color.Silver;
             this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(215, 613);
+            this.button23.Location = new System.Drawing.Point(282, 616);
             this.button23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(75, 63);
@@ -383,7 +383,7 @@
             // 
             this.richTextBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox11.Location = new System.Drawing.Point(528, 323);
+            this.richTextBox11.Location = new System.Drawing.Point(576, 323);
             this.richTextBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox11.MaxLength = 1;
             this.richTextBox11.Multiline = false;
@@ -397,7 +397,7 @@
             // 
             this.richTextBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox12.Location = new System.Drawing.Point(446, 323);
+            this.richTextBox12.Location = new System.Drawing.Point(494, 323);
             this.richTextBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox12.MaxLength = 2;
             this.richTextBox12.Multiline = false;
@@ -413,7 +413,7 @@
             this.richTextBox2.BackColor = System.Drawing.Color.Silver;
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(794, 119);
+            this.richTextBox2.Location = new System.Drawing.Point(842, 119);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
@@ -426,7 +426,7 @@
             this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox3.BackColor = System.Drawing.Color.White;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(794, 162);
+            this.richTextBox3.Location = new System.Drawing.Point(842, 162);
             this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox3.MaxLength = 3;
             this.richTextBox3.Multiline = false;
@@ -443,7 +443,7 @@
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.richTextBox4.Location = new System.Drawing.Point(196, 40);
+            this.richTextBox4.Location = new System.Drawing.Point(244, 40);
             this.richTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -478,7 +478,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(200, 775);
+            this.panelSideMenu.Size = new System.Drawing.Size(237, 775);
             this.panelSideMenu.TabIndex = 24;
             // 
             // PublicSongsButton
@@ -486,15 +486,16 @@
             this.PublicSongsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.PublicSongsButton.FlatAppearance.BorderSize = 0;
             this.PublicSongsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PublicSongsButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PublicSongsButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PublicSongsButton.ForeColor = System.Drawing.SystemColors.Info;
             this.PublicSongsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PublicSongsButton.Location = new System.Drawing.Point(0, 550);
             this.PublicSongsButton.Name = "PublicSongsButton";
             this.PublicSongsButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.PublicSongsButton.Size = new System.Drawing.Size(200, 50);
+            this.PublicSongsButton.Size = new System.Drawing.Size(237, 50);
             this.PublicSongsButton.TabIndex = 7;
             this.PublicSongsButton.Text = "Public Songs";
+            this.PublicSongsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.PublicSongsButton.UseVisualStyleBackColor = true;
             this.PublicSongsButton.Click += new System.EventHandler(this.PublicSongsButton_Click);
             // 
@@ -503,14 +504,14 @@
             this.DeleteButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.DeleteButton.FlatAppearance.BorderSize = 0;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.ForeColor = System.Drawing.SystemColors.Info;
             this.DeleteButton.Image = global::Nhap.Properties.Resources.delete;
             this.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DeleteButton.Location = new System.Drawing.Point(0, 500);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.DeleteButton.Size = new System.Drawing.Size(200, 50);
+            this.DeleteButton.Size = new System.Drawing.Size(237, 50);
             this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -524,7 +525,7 @@
             this.panelSaveSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSaveSubmenu.Location = new System.Drawing.Point(0, 400);
             this.panelSaveSubmenu.Name = "panelSaveSubmenu";
-            this.panelSaveSubmenu.Size = new System.Drawing.Size(200, 100);
+            this.panelSaveSubmenu.Size = new System.Drawing.Size(237, 100);
             this.panelSaveSubmenu.TabIndex = 5;
             // 
             // ToFileButton
@@ -532,13 +533,13 @@
             this.ToFileButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ToFileButton.FlatAppearance.BorderSize = 0;
             this.ToFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToFileButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToFileButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToFileButton.ForeColor = System.Drawing.SystemColors.Info;
             this.ToFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ToFileButton.Location = new System.Drawing.Point(0, 50);
             this.ToFileButton.Name = "ToFileButton";
             this.ToFileButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ToFileButton.Size = new System.Drawing.Size(200, 50);
+            this.ToFileButton.Size = new System.Drawing.Size(237, 50);
             this.ToFileButton.TabIndex = 1;
             this.ToFileButton.Text = "To File";
             this.ToFileButton.UseVisualStyleBackColor = true;
@@ -549,13 +550,13 @@
             this.ToAccountButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ToAccountButton.FlatAppearance.BorderSize = 0;
             this.ToAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToAccountButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToAccountButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToAccountButton.ForeColor = System.Drawing.SystemColors.Info;
             this.ToAccountButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ToAccountButton.Location = new System.Drawing.Point(0, 0);
             this.ToAccountButton.Name = "ToAccountButton";
             this.ToAccountButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ToAccountButton.Size = new System.Drawing.Size(200, 50);
+            this.ToAccountButton.Size = new System.Drawing.Size(237, 50);
             this.ToAccountButton.TabIndex = 0;
             this.ToAccountButton.Text = "To Account";
             this.ToAccountButton.UseVisualStyleBackColor = true;
@@ -566,13 +567,13 @@
             this.SaveButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.SystemColors.Info;
             this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SaveButton.Location = new System.Drawing.Point(0, 350);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SaveButton.Size = new System.Drawing.Size(200, 50);
+            this.SaveButton.Size = new System.Drawing.Size(237, 50);
             this.SaveButton.TabIndex = 4;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -586,7 +587,7 @@
             this.panelOpenSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpenSubmenu.Location = new System.Drawing.Point(0, 250);
             this.panelOpenSubmenu.Name = "panelOpenSubmenu";
-            this.panelOpenSubmenu.Size = new System.Drawing.Size(200, 100);
+            this.panelOpenSubmenu.Size = new System.Drawing.Size(237, 100);
             this.panelOpenSubmenu.TabIndex = 3;
             // 
             // FromFileButton
@@ -594,13 +595,13 @@
             this.FromFileButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.FromFileButton.FlatAppearance.BorderSize = 0;
             this.FromFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FromFileButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromFileButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromFileButton.ForeColor = System.Drawing.SystemColors.Info;
             this.FromFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FromFileButton.Location = new System.Drawing.Point(0, 50);
             this.FromFileButton.Name = "FromFileButton";
             this.FromFileButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FromFileButton.Size = new System.Drawing.Size(200, 47);
+            this.FromFileButton.Size = new System.Drawing.Size(237, 47);
             this.FromFileButton.TabIndex = 1;
             this.FromFileButton.Text = "From File";
             this.FromFileButton.UseVisualStyleBackColor = true;
@@ -613,15 +614,16 @@
             this.FromAccountButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.FromAccountButton.FlatAppearance.BorderSize = 0;
             this.FromAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FromAccountButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromAccountButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromAccountButton.ForeColor = System.Drawing.SystemColors.Info;
             this.FromAccountButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FromAccountButton.Location = new System.Drawing.Point(0, 0);
             this.FromAccountButton.Name = "FromAccountButton";
             this.FromAccountButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FromAccountButton.Size = new System.Drawing.Size(200, 50);
+            this.FromAccountButton.Size = new System.Drawing.Size(237, 50);
             this.FromAccountButton.TabIndex = 0;
             this.FromAccountButton.Text = "From Account";
+            this.FromAccountButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.FromAccountButton.UseVisualStyleBackColor = false;
             this.FromAccountButton.Click += new System.EventHandler(this.FromAccountButton_Click);
             // 
@@ -631,13 +633,13 @@
             this.OpenButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.OpenButton.FlatAppearance.BorderSize = 0;
             this.OpenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpenButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenButton.ForeColor = System.Drawing.SystemColors.Info;
             this.OpenButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OpenButton.Location = new System.Drawing.Point(0, 200);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.OpenButton.Size = new System.Drawing.Size(200, 50);
+            this.OpenButton.Size = new System.Drawing.Size(237, 50);
             this.OpenButton.TabIndex = 2;
             this.OpenButton.Text = "Open";
             this.OpenButton.UseVisualStyleBackColor = true;
@@ -648,13 +650,13 @@
             this.NewButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.NewButton.FlatAppearance.BorderSize = 0;
             this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewButton.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewButton.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewButton.ForeColor = System.Drawing.SystemColors.Info;
             this.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewButton.Location = new System.Drawing.Point(0, 150);
             this.NewButton.Name = "NewButton";
             this.NewButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.NewButton.Size = new System.Drawing.Size(200, 50);
+            this.NewButton.Size = new System.Drawing.Size(237, 50);
             this.NewButton.TabIndex = 1;
             this.NewButton.Text = "New";
             this.NewButton.UseVisualStyleBackColor = true;
@@ -666,7 +668,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 150);
+            this.panelLogo.Size = new System.Drawing.Size(237, 150);
             this.panelLogo.TabIndex = 0;
             // 
             // button22
@@ -675,7 +677,7 @@
             this.button22.BackColor = System.Drawing.Color.Black;
             this.button22.BackgroundImage = global::Nhap.Properties.Resources.keyboardlogo2;
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button22.Location = new System.Drawing.Point(0, 0);
+            this.button22.Location = new System.Drawing.Point(18, 0);
             this.button22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(200, 150);
@@ -691,7 +693,7 @@
             this.AccountLogoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AccountLogoButton.FlatAppearance.BorderSize = 0;
             this.AccountLogoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AccountLogoButton.Location = new System.Drawing.Point(967, 119);
+            this.AccountLogoButton.Location = new System.Drawing.Point(1015, 119);
             this.AccountLogoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AccountLogoButton.Name = "AccountLogoButton";
             this.AccountLogoButton.Size = new System.Drawing.Size(159, 150);
@@ -704,7 +706,7 @@
             this.button20.BackColor = System.Drawing.Color.Silver;
             this.button20.BackgroundImage = global::Nhap.Properties.Resources.Curved_Note;
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button20.Location = new System.Drawing.Point(215, 540);
+            this.button20.Location = new System.Drawing.Point(282, 543);
             this.button20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(75, 63);
@@ -718,7 +720,7 @@
             this.button19.BackColor = System.Drawing.Color.Silver;
             this.button19.BackgroundImage = global::Nhap.Properties.Resources.Black_Note;
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Location = new System.Drawing.Point(215, 466);
+            this.button19.Location = new System.Drawing.Point(282, 469);
             this.button19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(75, 63);
@@ -732,7 +734,7 @@
             this.button18.BackColor = System.Drawing.Color.Silver;
             this.button18.BackgroundImage = global::Nhap.Properties.Resources.White_Note;
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.Location = new System.Drawing.Point(215, 393);
+            this.button18.Location = new System.Drawing.Point(282, 396);
             this.button18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(75, 63);
@@ -746,7 +748,7 @@
             this.button17.BackColor = System.Drawing.Color.Silver;
             this.button17.BackgroundImage = global::Nhap.Properties.Resources.Round_Note;
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.Location = new System.Drawing.Point(215, 323);
+            this.button17.Location = new System.Drawing.Point(282, 326);
             this.button17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 63);
@@ -760,7 +762,7 @@
             this.button16.BackColor = System.Drawing.Color.Silver;
             this.button16.BackgroundImage = global::Nhap.Properties.Resources.Play_Button;
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button16.Location = new System.Drawing.Point(794, 235);
+            this.button16.Location = new System.Drawing.Point(842, 235);
             this.button16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(102, 68);
@@ -775,7 +777,7 @@
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.UsernameTextBox.Location = new System.Drawing.Point(967, 267);
+            this.UsernameTextBox.Location = new System.Drawing.Point(1015, 267);
             this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -790,7 +792,7 @@
             this.SpeedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SpeedTextBox.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpeedTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.SpeedTextBox.Location = new System.Drawing.Point(215, 267);
+            this.SpeedTextBox.Location = new System.Drawing.Point(282, 270);
             this.SpeedTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SpeedTextBox.Name = "SpeedTextBox";
             this.SpeedTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -805,7 +807,7 @@
             this.PitchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PitchTextBox.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PitchTextBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.PitchTextBox.Location = new System.Drawing.Point(687, 397);
+            this.PitchTextBox.Location = new System.Drawing.Point(735, 397);
             this.PitchTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PitchTextBox.Name = "PitchTextBox";
             this.PitchTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -818,7 +820,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
-            this.ClientSize = new System.Drawing.Size(1155, 775);
+            this.ClientSize = new System.Drawing.Size(1250, 775);
             this.Controls.Add(this.PitchTextBox);
             this.Controls.Add(this.SpeedTextBox);
             this.Controls.Add(this.UsernameTextBox);
