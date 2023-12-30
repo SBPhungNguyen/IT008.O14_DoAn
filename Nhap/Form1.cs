@@ -93,6 +93,15 @@ namespace Nhap
             dataGridView1.Columns["pitch"].Width = 100;
             dataGridView1.Columns["speed"].Width = 100;
 
+            DataGridViewCellStyle headerStyle = new DataGridViewCellStyle();
+
+            headerStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            headerStyle.Font = new System.Drawing.Font(dataGridView1.Font.FontFamily, 12, System.Drawing.FontStyle.Bold);
+
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.HeaderCell.Style = headerStyle;
+            }
         }
 
         public Form1(string username, string sheetname, string sheetdetails)
@@ -172,6 +181,8 @@ namespace Nhap
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "MyCrotchet";
+            UsernameTextBox.Text = User;
+            UsernameTextBox.SelectionAlignment = HorizontalAlignment.Center;
             richTextBox4.SelectionAlignment = HorizontalAlignment.Center;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.AllowUserToAddRows = false;
@@ -618,12 +629,6 @@ namespace Nhap
         {
             if (is_playing%2==1&&timer_playing < lines)
             {
-                if (KeyBoardEnabledWhilePlaying == true)
-                {
-                    KeyboardEnabled = false;
-                    button22.BackColor = Color.Black;
-                    button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo2;
-                }
                 switch (notes[timer_playing])
                 {
                     case "C4": C4.Play(); break;
@@ -666,14 +671,7 @@ namespace Nhap
                 timer1.Stop();
                 dataGridView1.AllowUserToDeleteRows = true;
                 button21.Enabled = true;
-                //button22.Enabled = true;
                 button16.BackgroundImage = Properties.Resources.Play_Button;
-                if (KeyBoardEnabledWhilePlaying == true)
-                {
-                    KeyboardEnabled = true;
-                    button22.BackColor = Color.Black;
-                    button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo1;
-                }
                 for (int j = 0; j <= lines; j++)
                     notes[lines] = "";
                 lines = 0;
@@ -776,7 +774,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -816,7 +813,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -894,7 +890,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -910,7 +905,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -945,7 +939,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -970,7 +963,6 @@ namespace Nhap
             timer1.Stop();
             dataGridView1.AllowUserToDeleteRows = true;
             button21.Enabled = true;
-            //button22.Enabled = true;
             button16.BackgroundImage = Properties.Resources.Play_Button;
             for (int j = 0; j <= lines; j++)
                 notes[lines] = "";
@@ -981,7 +973,7 @@ namespace Nhap
             Public.ShowDialog();
         }
 
-        private void button22_Click(object sender, EventArgs e) //keyboard enable
+        /*private void button22_Click(object sender, EventArgs e) //keyboard enable
         {
             if(KeyboardEnabled)
             {
@@ -995,7 +987,7 @@ namespace Nhap
                 button22.BackColor = Color.Black;
                 button22.BackgroundImage = Nhap.Properties.Resources.keyboardlogo1;
             }
-        }
+        }*/
 
         private void button24_Click(object sender, EventArgs e)
         {

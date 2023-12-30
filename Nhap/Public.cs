@@ -56,6 +56,7 @@ namespace Nhap
         {
             LoadData();
             richTextBox1.Text = " ";
+            SongNameTextBox.BackColor = this.BackColor;
         }
 
         private void LoadData()
@@ -126,7 +127,7 @@ namespace Nhap
                 SheetName = dataGridView1.Rows[e.RowIndex].Cells["Song Name"].Value.ToString();
                 sheetdetails = dataGridView1.Rows[e.RowIndex].Cells["Sheet Details"].Value.ToString();
                 creator = dataGridView1.Rows[e.RowIndex].Cells["Creator"].Value.ToString();
-                label7.Text = SheetName;
+                SongNameTextBox.Text = "                     " + SheetName;
                 label5.Text = creator;
                 string queryString = "SELECT LikesHistory FROM PublicSong WHERE Username = @Username AND SheetName = @SheetName";
                 // Create a new SqlDataAdapter with the query and connection
