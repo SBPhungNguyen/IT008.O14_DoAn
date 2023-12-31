@@ -28,11 +28,13 @@ Người dùng được tiếp xúc với âm nhạc theo cách trực quan sinh
 -	**Thiết kế nhỏ gọn:** <br>
 MyCrotchet là một ứng dụng được thiết kế tối giản song không đem lại sự nhàm chán; giúp tập trung người sử dụng vào những tiện ích hữu hiệu nhất mà nó đem lại. <br>
 -	**Hướng dẫn và mẹo vặt:** <br>
-Người chơi mới có thể dễ dàng tiếp cận các chỉ dẫn cô đọng súc tích hướng dẫn họ các kiến thức cơ bản về piano. Ngoài ra, những mẹo vặt hữu ích của trò chơi cũng góp phần cải thiện kĩ năng của người chơi một cách nhanh chóng. <br>
+Người chơi mới có thể dễ dàng tiếp cận các chỉ dẫn cô đọng súc tích và những mẹo vặt hữu ích của trò chơi cũng góp phần cải thiện kĩ năng của người chơi một cách nhanh chóng. <br>
 -	**Soạn nhạc:** <br>
 Người dùng có thể tự do sáng tác cũng như trình bày những bản nhạc theo sự sáng tạo của riêng mình. <br>
 -	**Lưu trữ hệ thống:** <br>
-Những bản nhạc quý báu mà người dùng đã tận tâm biên soạn sẽ được chúng tôi lưu giữ một cách cẩn trọng trên cơ sở dữ liệu của mình. <br>
+Những bản nhạc quý báu mà người dùng đã tận tâm biên soạn sẽ được lưu giữ một cách cẩn trọng trên cơ sở dữ liệu của mình hoặc lưu trên thiết bị của người dùng nếu họ muốn. <br>
+-	**Đăng bản nhạc công khai:** <br>
+Trong bối cảnh ngày càng gia tăng sự đa dạng và sáng tạo trong lĩnh vực nghệ thuật âm nhạc, chúng tôi hân hạnh giới thiệu tính năng Đăng bản nhạc Công khai nhằm tạo ra một môi trường nghệ thuật độc đáo, nơi mà cộng đồng người dùng có thể tương tác và chia sẻ niềm đam mê âm nhạc chung. <br>
 
 **How to use:** <br>
 *Phần mềm này yêu cầu máy tính của bạn có hỗ trợ sqlServer, nếu bạn chưa có ứng dụng  này, bạn có thể download tại https://www.microsoft.com/en-us/sql-server/sql-server-downloads* <br>
