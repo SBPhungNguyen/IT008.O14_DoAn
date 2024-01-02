@@ -698,6 +698,7 @@ namespace Nhap
             }
         }
         ////////////////////////////////////////////
+        /*
         private void saveToolStripMenuItem_Click(object sender, EventArgs e) // File -> Save
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -862,6 +863,7 @@ namespace Nhap
 
             saved = 0;
         }
+        */
         private void dataGridView1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             editedrowindex = -1;
@@ -884,7 +886,7 @@ namespace Nhap
             Environment.Exit(0);
 
         }
-
+        /*
         private void fromAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -972,6 +974,7 @@ namespace Nhap
             Public Public = new Public(User); 
             Public.ShowDialog();
         }
+        */
 
         /*private void button22_Click(object sender, EventArgs e) //keyboard enable
         {
